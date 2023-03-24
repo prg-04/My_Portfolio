@@ -150,6 +150,178 @@
   }
 }
 
+#portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem 0;
+
+    h2 {
+      font-family: "Crete Round", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 52px;
+      color: #1c1a19;
+    }
+
+    hr {
+      margin-top: 1rem;
+      background-color: #1c1a19;
+      width: 90%;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    .placeholder {
+      .plchdr_img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .plchdr_text {
+        h3 {
+          font-family: "Crete Round", serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 44px;
+          color: #091e42;
+        }
+
+        p {
+          font-family: "Inter", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #091e42;
+        }
+
+        ul {
+          display: flex;
+          gap: 1rem;
+
+          li {
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            color: #091e42;
+            border: 1px solid #8993a4;
+            padding: 10px 12px;
+            border-radius: 5px;
+          }
+        }
+
+        button {
+          font-family: "Inter", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 17px;
+          line-height: 24px;
+          letter-spacing: 0.03em;
+          background: #ff6b00;
+          color: #fff;
+          padding: 12px;
+          border: none;
+          border-radius: 8px;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .card {
+      width: 327px;
+      height: 386px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .card_title {
+        font-family: "Crete Round", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 44px;
+        color: #fff;
+        margin-top: 7rem;
+      }
+
+      .card_description {
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+      }
+
+      .tech_stack {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        .tech {
+          font-family: "Inter", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 20px;
+          color: #fff;
+          padding: 12px;
+          background: rgba(255, 255, 255, 0.24);
+        }
+      }
+
+      .card_btn {
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+        color: #fff;
+        background: #ff6b00;
+        padding: 12px;
+        border: none;
+        width: 100%;
+        align-self: self-end;
+      }
+    }
+
+    .card_1,
+    .card_4 {
+      background-image: url("./assets/card-1.png");
+      background-repeat: no-repeat;
+    }
+
+    .card_2,
+    .card_5 {
+      background-image: url("./assets/card_2.png");
+      background-repeat: no-repeat;
+    }
+
+    .card_3,
+    .card_6 {
+      background-image: url("./assets/card_3.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 #hero {
   background-color: #1c1a19;
   height: 100vh;
@@ -212,168 +384,6 @@
           height: 1.8rem;
         }
       }
-    }
-  }
-}
-#portfolio {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 1rem;
-
-  .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2.5rem 0;
-
-    h2 {
-      font-family: "Crete Round";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 40px;
-      line-height: 52px;
-      color: #1c1a19;
-    }
-
-    hr {
-      margin-top: 1rem;
-      background-color: #1c1a19;
-      width: 90%;
-    }
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    .placeholder {
-      .plchdr_img {
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .plchdr_text {
-        h3 {
-          font-family: "Crete Round", sans-serif;
-          font-style: normal;
-          font-weight: 600;
-          font-size: 32px;
-          line-height: 44px;
-          color: #091e42;
-        }
-
-        p {
-          font-family: "Inter", sans-serif;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          color: #091e42;
-        }
-
-        ul {
-          display: flex;
-          gap: 1rem;
-
-          li {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 20px;
-            color: #091e42;
-            border: 1px solid #8993a4;
-            padding: 10px 12px;
-            border-radius: 5px;
-          }
-        }
-        button {
-          font-family: "Inter", sans-serif;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 17px;
-          line-height: 24px;
-          letter-spacing: 0.03em;
-          background: #ff6b00;
-          color: #fff;
-          padding: 12px;
-          border: none;
-          border-radius: 8px;
-          margin-top: 1rem;
-        }
-      }
-    }
-    .card {
-      width: 327px;
-      height: 386px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      h3 {
-        font-family: "Crete Round", sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 44px;
-        color: #fff;
-        margin-top: 7rem;
-      }
-      p {
-        font-family: "Inter", sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #fff;
-      }
-
-      ul {
-        display: flex;
-        gap: 1rem;
-        margin: 1rem 0;
-
-        li {
-          font-family: "Inter", sans-serif;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 15px;
-          line-height: 20px;
-          color: #ffffff;
-          padding: 12px;
-          background: rgba(255, 255, 255, 0.24);
-        }
-      }
-      button {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 17px;
-        line-height: 24px;
-        color: #ffffff;
-        background: #ff6b00;
-        padding: 12px;
-        border: none;
-        width: 100%;
-        align-self: self-end;
-      }
-    }
-
-    .card_1,
-    .card_4 {
-      background-image: url("./assets/card-1.png");
-      background-repeat: no-repeat;
-    }
-    .card_2,
-    .card_5 {
-      background-image: url("./assets/card_2.png");
-      background-repeat: no-repeat;
-    }
-    .card_3,
-    .card_6 {
-      background-image: url("./assets/card_3.png");
-      background-repeat: no-repeat;
     }
   }
 }
