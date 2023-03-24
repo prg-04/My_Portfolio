@@ -250,8 +250,8 @@
 }
 
 #portfolio .card {
-  width: 327px;
-  height: 386px;
+  max-width: 427px;
+  height: 485px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -264,7 +264,7 @@
   font-size: 32px;
   line-height: 44px;
   color: #fff;
-  margin-top: 7rem;
+  margin-top: 12rem;
 }
 
 #portfolio .card .card_description {
@@ -322,18 +322,21 @@
 #portfolio .card_4 {
   background-image: url("./assets/card-1.png");
   background-repeat: no-repeat;
+  background-size: 427px;
 }
 
 #portfolio .card_2,
 #portfolio .card_5 {
   background-image: url("./assets/card_2.png");
   background-repeat: no-repeat;
+  background-size: 427px;
 }
 
 #portfolio .card_3,
 #portfolio .card_6 {
   background-image: url("./assets/card_3.png");
   background-repeat: no-repeat;
+  background-size: 427px;
 }
 
 #hero {
@@ -445,6 +448,19 @@
     background-position: right center;
   }
 
+  #portfolio {
+    padding: 5rem;
+  }
+
+  #portfolio .title {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #portfolio .title hr {
+    width: 50%;
+  }
+
   #portfolio .cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -471,5 +487,38 @@
     width: 25%;
     height: 48px;
     padding: 12px;
+  }
+
+  #portfolio .cards .card {
+    height: 450px;
+  }
+
+  #portfolio .cards .card .tech_stack {
+    margin: 1rem;
+  }
+
+  #portfolio .cards .card .card_btn {
+    display: none;
+  }
+
+  #portfolio .cards .card:hover {
+    flex-direction: column-reverse;
+  }
+
+  #portfolio .cards .card:hover .card_title {
+    display: none;
+  }
+
+  #portfolio .cards .card:hover .card_description {
+    display: none;
+  }
+
+  #portfolio .cards .card:hover .tech_stack {
+    display: none;
+  }
+
+  #portfolio .cards .card:hover .card_btn {
+    align-self: self-end;
+    display: block;
   }
 }
