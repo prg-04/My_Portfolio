@@ -25,7 +25,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [My_Portfolio] <a name="about-project"></a>
-
+My portfolio website is a showcase of my work, featuring a curated collection of my best projects in a sleek and modern design. Through a combination of stunning visuals, detailed descriptions, and engaging storytelling, visitors can get a glimpse into my creative process and the skills I bring to the table. Whether you're a potential client or just a curious browser, my portfolio website is the perfect way to explore my body of work and see what I'm capable of.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>

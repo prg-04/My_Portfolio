@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,12 +18,10 @@
   justify-content: space-between;
   align-items: center;
 }
-
 #navigation .logo {
   color: #f55800;
   margin-left: 1.5rem;
 }
-
 #navigation .logo h3 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -33,18 +30,15 @@
   line-height: 1.5rem;
   color: #fff;
 }
-
 #navigation .navlinks {
   display: none;
   margin-right: 1.5rem;
 }
-
 #navigation .navlinks .links {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
-
 #navigation .navlinks .links li a {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -53,11 +47,9 @@
   line-height: 1.25rem;
   color: #fff;
 }
-
 #navigation .navlinks .links li a .fa-envelope {
   font-size: 1.5rem;
 }
-
 #navigation .navlinks.open {
   display: flex;
   justify-content: start;
@@ -68,7 +60,6 @@
   width: 100%;
   background-color: #1c1a19;
 }
-
 #navigation .navlinks.open .links {
   flex-direction: column;
   align-items: flex-start;
@@ -76,17 +67,14 @@
   margin-top: 5rem;
   width: 100%;
 }
-
 #navigation .navlinks.open .links :nth-child(4) {
   display: none;
 }
-
 #navigation .navlinks.open .links li {
   border-bottom: 1px solid #6f6c6b;
   padding: 1rem;
   width: 100%;
 }
-
 #navigation .navlinks.open .links li a {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -94,7 +82,6 @@
   font-size: 2rem;
   line-height: 2.75rem;
 }
-
 #navigation .toggle {
   height: 2.188rem;
   width: 2.188rem;
@@ -106,7 +93,6 @@
   margin-right: 1.5rem;
   cursor: pointer;
 }
-
 #navigation .toggle .menu {
   position: relative;
   height: 0.25rem;
@@ -115,7 +101,6 @@
   background: #fff;
   transition: all 0.5s ease-in-out;
 }
-
 #navigation .toggle .menu::before,
 #navigation .toggle .menu::after {
   content: "";
@@ -126,24 +111,19 @@
   background: #fff;
   transition: all 0.5s ease-in-out;
 }
-
 #navigation .toggle .menu::before {
   transform: translateY(-10px);
 }
-
 #navigation .toggle .menu::after {
   transform: translateY(10px);
 }
-
 #navigation .toggle.open .menu {
   transform: translateX(-35px);
   background-color: transparent;
 }
-
 #navigation .toggle.open .menu::before {
   transform: rotate(45deg) translate(24px, -24px);
 }
-
 #navigation .toggle.open .menu::after {
   transform: rotate(-45deg) translate(24px, 24px);
 }
@@ -153,7 +133,6 @@
   grid-template-columns: 1fr;
   padding: 1rem;
 }
-
 #portfolio .title {
   display: flex;
   flex-direction: column;
@@ -161,7 +140,6 @@
   justify-content: center;
   margin: 2.5rem 0;
 }
-
 #portfolio .title h2 {
   font-family: "Crete Round", serif;
   font-style: normal;
@@ -170,24 +148,24 @@
   line-height: 52px;
   color: #1c1a19;
 }
-
 #portfolio .title hr {
-  margin-top: 1rem;
+  margin-top: 1.8rem;
   background-color: #1c1a19;
   width: 90%;
 }
-
 #portfolio .cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
-
+#portfolio .cards .placeholder {
+  display: flex;
+  flex-direction: column;
+}
 #portfolio .cards .placeholder .plchdr_img img {
   width: 100%;
   height: 100%;
 }
-
 #portfolio .cards .placeholder .plchdr_text h3 {
   font-family: "Crete Round", serif;
   font-style: normal;
@@ -196,7 +174,6 @@
   line-height: 44px;
   color: #091e42;
 }
-
 #portfolio .cards .placeholder .plchdr_text p {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -205,12 +182,11 @@
   line-height: 24px;
   color: #091e42;
 }
-
 #portfolio .cards .placeholder .plchdr_text ul {
   display: flex;
+  margin: 1.5rem 1rem 1rem 0;
   gap: 1rem;
 }
-
 #portfolio .cards .placeholder .plchdr_text ul li {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -222,7 +198,6 @@
   padding: 10px 12px;
   border-radius: 2px;
 }
-
 #portfolio .cards .placeholder .plchdr_text button {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -237,18 +212,15 @@
   border-radius: 3px;
   margin-top: 1rem;
 }
-
 #portfolio .cards .placeholder .plchdr_text button:hover {
   color: #f55800;
   background-color: #fff5e1;
   border: 1px solid #f55800;
 }
-
 #portfolio .cards .placeholder .plchdr_text button:visited {
   color: #f4f1f0;
   background-color: #e05304;
 }
-
 #portfolio .card {
   max-width: 427px;
   height: 485px;
@@ -256,17 +228,16 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
 #portfolio .card .card_title {
-  font-family: "Crete Round", sans-serif;
+  font-family: "Crete Round", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 44px;
   color: #fff;
   margin-top: 12rem;
+  padding-left: 1rem;
 }
-
 #portfolio .card .card_description {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -274,14 +245,13 @@
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  padding-left: 1rem;
 }
-
 #portfolio .card .tech_stack {
   display: flex;
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 1rem;
 }
-
 #portfolio .card .tech_stack .tech {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -292,7 +262,6 @@
   padding: 12px;
   background: rgba(255, 255, 255, 0.24);
 }
-
 #portfolio .card .card_btn {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -306,32 +275,27 @@
   width: 100%;
   align-self: self-end;
 }
-
 #portfolio .card .card_btn:hover {
   color: #f55800;
   background-color: #fff5e1;
   border: 1px solid #f55800;
 }
-
 #portfolio .card .card_btn:visited {
   color: #f4f1f0;
   background-color: #e05304;
 }
-
 #portfolio .card_1,
 #portfolio .card_4 {
   background-image: url("./assets/card-1.png");
   background-repeat: no-repeat;
   background-size: 427px;
 }
-
 #portfolio .card_2,
 #portfolio .card_5 {
   background-image: url("./assets/card_2.png");
   background-repeat: no-repeat;
   background-size: 427px;
 }
-
 #portfolio .card_3,
 #portfolio .card_6 {
   background-image: url("./assets/card_3.png");
@@ -349,12 +313,10 @@
   display: flex;
   flex-direction: column;
 }
-
 #hero .hero_text {
   margin-top: 3.5rem;
   max-width: 35.375rem;
 }
-
 #hero .hero_text .title {
   font-family: "Crete Round", serif;
   font-style: normal;
@@ -364,7 +326,6 @@
   letter-spacing: 0.37px;
   color: #ff6b00;
 }
-
 #hero .hero_text .subtitle {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -373,7 +334,6 @@
   line-height: 2rem;
   color: #fff5e1;
 }
-
 #hero .hero_text .text {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -384,141 +344,268 @@
   color: #fff;
   margin-top: 0.5rem;
 }
-
 #hero .hero_icons {
   margin-top: 2rem;
 }
-
 #hero .hero_icons .icon_links {
   display: flex;
   gap: 1.25rem;
 }
-
 #hero .hero_icons .icon_links .icon i {
   font-size: 1.8rem;
   color: #dbd8d7;
 }
-
 #hero .hero_icons .icon_links .icon img {
   height: 1.8rem;
+}
+
+#about {
+  background-color: #1c1a19;
+  background-image: url("./assets/about_img.png");
+  background-repeat: no-repeat;
+  background-position: 100% 12.5%;
+  height: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+#about hr {
+  margin: 10rem 0 1rem;
+  width: 90%;
+  align-self: center;
+}
+#about .about_me {
+  margin-top: 5rem;
+  max-width: 566px;
+  max-height: 582px;
+  margin-left: 1rem;
+}
+#about .about_me .abt_title {
+  font-family: "Crete Round", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 88px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+}
+#about .about_me .abt_description {
+  margin-top: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #f4f5f7;
+}
+#about .about_me .abt_btn {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  background: #ff6b00;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 1.5rem;
+}
+#about .about_me .abt_btn:hover {
+  color: #f55800;
+  background-color: #fff5e1;
+  border: 1px solid #f55800;
+}
+#about .about_me .abt_btn:visited {
+  color: #f4f1f0;
+  background-color: #e05304;
+}
+#about .experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+#about .experience .skill_stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 367px;
+  height: 350px;
+  padding: 1rem;
+}
+#about .experience .skill_stack .skl_stack-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+#about .experience .skill_stack .skl_stack-title span {
+  font-size: 2rem;
+  color: #f55800;
+}
+#about .experience .skill_stack .skl_stack-title .entity {
+  font-size: 3rem;
+}
+#about .experience .skill_stack .abt-tec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+#about .experience .skill_stack .abt-tec .skill {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 43px;
+  text-align: center;
+  color: #fff;
 }
 
 @media screen and (min-width: 48rem) {
   #navigation .navlinks {
     display: block;
   }
-
   #navigation .toggle {
     display: none;
   }
-
   #hero {
     flex-direction: row-reverse;
     justify-content: start;
     background-image: url("./assets/hero_mob.png");
-    background-size: 300px;
-    background-position: right center;
+    background-size: 200px;
+    background-position: right bottom;
   }
-
   #hero .hero_text {
-    width: 30rem;
+    width: 35rem;
   }
-
+  #hero .hero_text .title {
+    margin-top: 3rem;
+    font-size: 72px;
+    line-height: 82px;
+  }
+  #hero .hero_text .subtitle {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  #hero .hero_text .text {
+    font-size: 20px;
+    line-height: 32px;
+  }
   #hero .hero_icons ul {
     flex-direction: column;
     margin-top: 6rem;
     width: 5rem;
     align-items: center;
   }
-
   #portfolio .cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-
   #portfolio .cards .placeholder {
     grid-column: 1/3;
   }
+  #portfolio .cards .placeholder .plchdr_text {
+    margin-top: 1rem;
+  }
+  #about .about_me {
+    margin-left: 2rem;
+  }
 }
-
 @media screen and (min-width: 1200px) {
   #hero {
     background-image: url("./assets/hero-desktop.png");
     background-size: 650px;
     background-position: right center;
   }
-
   #portfolio {
     padding: 5rem;
   }
-
   #portfolio .title {
     flex-direction: row;
     justify-content: space-around;
   }
-
   #portfolio .title hr {
     width: 50%;
   }
-
   #portfolio .cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
-
   #portfolio .cards .placeholder {
     grid-column: 1/4;
     display: flex;
     flex-direction: row;
   }
-
   #portfolio .cards .placeholder .plchdr_img {
     width: 50%;
   }
-
   #portfolio .cards .placeholder .plchdr_text {
     width: 50%;
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
   }
-
   #portfolio .cards .placeholder .plchdr_text button {
     width: 25%;
     height: 48px;
     padding: 12px;
   }
-
   #portfolio .cards .card {
     height: 450px;
   }
-
   #portfolio .cards .card .tech_stack {
     margin: 1rem;
   }
-
   #portfolio .cards .card .card_btn {
     display: none;
   }
-
   #portfolio .cards .card:hover {
     flex-direction: column-reverse;
   }
-
   #portfolio .cards .card:hover .card_title {
     display: none;
   }
-
   #portfolio .cards .card:hover .card_description {
     display: none;
   }
-
   #portfolio .cards .card:hover .tech_stack {
     display: none;
   }
-
   #portfolio .cards .card:hover .card_btn {
     align-self: self-end;
     display: block;
   }
-}
+  #about {
+    background-image: url("./assets/about_me.png");
+  }
+  #about hr {
+    margin-top: 15rem;
+  }
+  #about .about_me {
+    margin-left: 3.5rem;
+  }
+  #about .experience {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #about .experience .skill_stack {
+    align-items: start;
+  }
+  #about .experience .skill_stack .abt-tec {
+    align-items: start;
+  }
+  #about .experience .stack-one {
+    margin-top: -2.5rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
