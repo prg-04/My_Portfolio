@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -133,6 +134,7 @@
   grid-template-columns: 1fr;
   padding: 1rem;
 }
+
 #portfolio .title {
   display: flex;
   flex-direction: column;
@@ -140,6 +142,7 @@
   justify-content: center;
   margin: 2.5rem 0;
 }
+
 #portfolio .title h2 {
   font-family: "Crete Round", serif;
   font-style: normal;
@@ -153,6 +156,7 @@
   background-color: #1c1a19;
   width: 90%;
 }
+
 #portfolio .cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -162,10 +166,12 @@
   display: flex;
   flex-direction: column;
 }
+
 #portfolio .cards .placeholder .plchdr_img img {
   width: 100%;
   height: 100%;
 }
+<
 #portfolio .cards .placeholder .plchdr_text h3 {
   font-family: "Crete Round", serif;
   font-style: normal;
@@ -174,6 +180,7 @@
   line-height: 44px;
   color: #091e42;
 }
+
 #portfolio .cards .placeholder .plchdr_text p {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -187,6 +194,7 @@
   margin: 1.5rem 1rem 1rem 0;
   gap: 1rem;
 }
+
 #portfolio .cards .placeholder .plchdr_text ul li {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -224,12 +232,14 @@
 #portfolio .card {
   max-width: 427px;
   height: 485px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 #portfolio .card .card_title {
   font-family: "Crete Round", serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -239,6 +249,7 @@
   padding-left: 1rem;
 }
 #portfolio .card .card_description {
+
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -253,6 +264,7 @@
   margin: 1rem;
 }
 #portfolio .card .tech_stack .tech {
+
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -263,6 +275,7 @@
   background: rgba(255, 255, 255, 0.24);
 }
 #portfolio .card .card_btn {
+
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -301,6 +314,7 @@
   background-image: url("./assets/card_3.png");
   background-repeat: no-repeat;
   background-size: 427px;
+
 }
 
 #hero {
@@ -508,6 +522,7 @@
     width: 5rem;
     align-items: center;
   }
+
   #portfolio .cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -521,6 +536,7 @@
   #about .about_me {
     margin-left: 2rem;
   }
+
 }
 @media screen and (min-width: 1200px) {
   #hero {
@@ -538,10 +554,12 @@
   #portfolio .title hr {
     width: 50%;
   }
+
   #portfolio .cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+
   #portfolio .cards .placeholder {
     grid-column: 1/4;
     display: flex;
@@ -550,12 +568,14 @@
   #portfolio .cards .placeholder .plchdr_img {
     width: 50%;
   }
+
   #portfolio .cards .placeholder .plchdr_text {
     width: 50%;
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
   }
+
   #portfolio .cards .placeholder .plchdr_text button {
     width: 25%;
     height: 48px;
@@ -609,3 +629,4 @@
     margin-top: -2.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
+

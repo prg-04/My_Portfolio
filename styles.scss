@@ -173,6 +173,7 @@
 
     hr {
       margin-top: 1.8rem;
+
       background-color: #1c1a19;
       width: 90%;
     }
@@ -186,6 +187,7 @@
     .placeholder {
       display: flex;
       flex-direction: column;
+
       .plchdr_img {
         img {
           width: 100%;
@@ -215,6 +217,7 @@
         ul {
           display: flex;
           margin: 1.5rem 1rem 1rem 0;
+
           gap: 1rem;
 
           li {
@@ -227,6 +230,7 @@
             border: 1px solid #8993a4;
             padding: 10px 12px;
             border-radius: 2px;
+
           }
         }
 
@@ -349,6 +353,7 @@
     background-image: url("./assets/card_3.png");
     background-repeat: no-repeat;
     background-size: 427px;
+
   }
 }
 
@@ -608,6 +613,7 @@
       margin-left: 2rem;
     }
   }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -716,6 +722,7 @@
       .stack-one {
         margin-top: -2.5rem;
       }
+
     }
   }
 }
