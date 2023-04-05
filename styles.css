@@ -154,6 +154,28 @@ body {
   transform: rotate(-45deg) translate(24px, 24px);
 }
 
+#footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer .footer_icon-links {
+  display: flex;
+  gap: 1rem;
+}
+
+#footer .footer_icon-links .footer_icon .footer_icon-icon {
+  font-size: 1.8rem;
+  color: #505f79;
+}
+
+#footer .footer_icon-links .footer_icon .fototer_icon-img {
+  height: 1.8rem;
+  filter: invert(70%);
+}
+
 #portfolio {
   display: grid;
   grid-template-columns: 1fr;
