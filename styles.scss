@@ -8,6 +8,13 @@
   list-style: none;
 }
 
+html,
+body {
+  width: fit-content;
+}
+
+$default-bg-size: 100px;
+
 #navigation {
   background-color: #3e3c3c;
   height: 4.5rem;
@@ -146,6 +153,30 @@
 
     &.open .menu::after {
       transform: rotate(-45deg) translate(24px, 24px);
+    }
+  }
+}
+
+#footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .footer_icon-links {
+    display: flex;
+    gap: 1rem;
+
+    .footer_icon {
+      .footer_icon-icon {
+        font-size: 1.8rem;
+        color: #505f79;
+      }
+
+      .fototer_icon-img {
+        height: 1.8rem;
+        filter: invert(70%);
+      }
     }
   }
 }
@@ -355,8 +386,9 @@
 
 #hero {
   background-color: #1c1a19;
-  height: 100vh;
+  height: 100%;
   background-image: url("./assets/hero_mob.png");
+  background-size: $default-bg-size*1.2;
   background-repeat: no-repeat;
   background-position: bottom right;
   padding: 5rem 2rem;
@@ -395,6 +427,7 @@
       letter-spacing: 0.8px;
       color: #fff;
       margin-top: 0.5rem;
+      width: 90%;
     }
   }
 
@@ -420,10 +453,11 @@
 }
 
 #about {
+  width: 100%;
   background-color: #1c1a19;
   background-image: url("./assets/about_img.png");
   background-repeat: no-repeat;
-  background-position: 100% 12.5%;
+  background-position: 100% 20.5%;
   height: 100%;
   margin-top: 5rem;
   display: flex;
@@ -493,7 +527,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
-    // gap: 2rem;
+    gap: 2rem;
 
     .skill_stack {
       display: flex;
@@ -542,6 +576,99 @@
           text-align: center;
           color: #fff;
         }
+      }
+    }
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contact_text {
+    margin: 3.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .cont_text {
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+      text-align: center;
+      color: #172b4d;
+    }
+  }
+
+  #form {
+    width: 80%;
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border: none;
+
+      .input-grp {
+        width: 100%;
+        margin: 0.5rem 0;
+        border-bottom: 1px solid #dbd8d7;
+
+        input {
+          width: 100%;
+          height: 40px;
+          border: none;
+          margin-bottom: 0.5rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .input-grp_msg {
+      width: 100%;
+      margin: 0.5rem 0;
+
+      textarea {
+        width: 100%;
+        border: none;
+        background-color: #fbf8f7;
+        padding: 1rem 0;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .submit_btn {
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 24px;
+      color: #fff;
+      width: 131px;
+      height: 48px;
+      background-color: #ff6b00;
+      padding: 0.5rem 0;
+      align-self: center;
+      border: none;
+
+      &:hover {
+        color: #f55800;
+        background-color: #fff5e1;
+        border: 1px solid #f55800;
+      }
+
+      &:visited {
+        color: #f4f1f0;
+        background-color: #e05304;
       }
     }
   }
@@ -613,6 +740,55 @@
   #about {
     .about_me {
       margin-left: 2rem;
+    }
+  }
+
+  #contact {
+    flex-direction: row;
+
+    .contact_text {
+      width: 40%;
+      margin-left: 5rem;
+      margin-top: 2rem;
+
+      .cont_text {
+        text-align: start;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+      }
+    }
+
+    #form {
+      margin-top: 5rem;
+      margin-right: 0.5rem;
+      width: 60%;
+
+      fieldset {
+        max-width: 660px;
+
+        .submit_btn {
+          align-self: start;
+        }
+      }
+    }
+  }
+
+  #footer {
+    margin-top: 4rem;
+
+    .footer_icon-links {
+      gap: 2rem;
+
+      .footer_icon {
+        .footer_icon-icon {
+          font-size: 2rem;
+        }
+
+        .footer_icon-img {
+          height: 2rem;
+        }
+      }
     }
   }
 }

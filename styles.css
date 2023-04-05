@@ -8,6 +8,12 @@
   list-style: none;
 }
 
+html,
+body {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 #navigation {
   background-color: #3e3c3c;
   height: 4.5rem;
@@ -349,8 +355,9 @@
 
 #hero {
   background-color: #1c1a19;
-  height: 100vh;
+  height: 100%;
   background-image: url("./assets/hero_mob.png");
+  background-size: 120px;
   background-repeat: no-repeat;
   background-position: bottom right;
   padding: 5rem 2rem;
@@ -391,6 +398,7 @@
   letter-spacing: 0.8px;
   color: #fff;
   margin-top: 0.5rem;
+  width: 90%;
 }
 
 #hero .hero_icons {
@@ -412,10 +420,11 @@
 }
 
 #about {
+  width: 100%;
   background-color: #1c1a19;
   background-image: url("./assets/about_img.png");
   background-repeat: no-repeat;
-  background-position: 100% 12.5%;
+  background-position: 100% 20.5%;
   height: 100%;
   margin-top: 5rem;
   display: flex;
@@ -486,6 +495,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  gap: 2rem;
 }
 
 #about .experience .skill_stack {
@@ -536,6 +546,99 @@
   line-height: 43px;
   text-align: center;
   color: #fff;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact .contact_text {
+  margin: 3.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .contact_text .cont_text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
+#contact #form {
+  width: 80%;
+}
+
+#contact #form fieldset {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: none;
+}
+
+#contact #form fieldset .input-grp {
+  width: 100%;
+  margin: 0.5rem 0;
+  border-bottom: 1px solid #dbd8d7;
+}
+
+#contact #form fieldset .input-grp input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+#contact #form fieldset .input-grp input:focus {
+  outline: none;
+}
+
+#contact #form .input-grp_msg {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+#contact #form .input-grp_msg textarea {
+  width: 100%;
+  border: none;
+  background-color: #fbf8f7;
+  padding: 1rem 0;
+}
+
+#contact #form .input-grp_msg textarea:focus {
+  outline: none;
+}
+
+#contact #form .submit_btn {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
+  width: 131px;
+  height: 48px;
+  background-color: #ff6b00;
+  padding: 0.5rem 0;
+  align-self: center;
+  border: none;
+}
+
+#contact #form .submit_btn:hover {
+  color: #f55800;
+  background-color: #fff5e1;
+  border: 1px solid #f55800;
+}
+
+#contact #form .submit_btn:visited {
+  color: #f4f1f0;
+  background-color: #e05304;
 }
 
 @media screen and (min-width: 48rem) {
@@ -597,6 +700,53 @@
 
   #about .about_me {
     margin-left: 2rem;
+  }
+
+  #contact {
+    flex-direction: row;
+  }
+
+  #contact .contact_text {
+    width: 40%;
+    margin-left: 5rem;
+    margin-top: 2rem;
+  }
+
+  #contact .contact_text .cont_text {
+    text-align: start;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  #contact #form {
+    margin-top: 5rem;
+    margin-right: 0.5rem;
+    width: 60%;
+  }
+
+  #contact #form fieldset {
+    max-width: 660px;
+  }
+
+  #contact #form fieldset .submit_btn {
+    align-self: start;
+  }
+
+  #footer {
+    margin-top: 4rem;
+  }
+
+  #footer .footer_icon-links {
+    gap: 2rem;
+  }
+
+  #footer .footer_icon-links .footer_icon .footer_icon-icon {
+    font-size: 2rem;
+  }
+
+  #footer .footer_icon-links .footer_icon .footer_icon-img {
+    height: 2rem;
   }
 }
 

@@ -194,13 +194,20 @@
     <section id="about">
       <div class="about_me">
         <h2 class="abt_title">About me</h2>
-        <p class="abt_description">Hey there! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+        <p class="abt_description">
+          Hey there! I can help you build a product, feature or website. Look
+          through some of my work and experience! If you like what you see and
+          have a project you need coded, don’t hesitate to contact me.
+        </p>
         <button class="abt_btn">Get my resume</button>
       </div>
       <hr class="abt_line" />
       <div class="experience">
         <div class="skill_stack stack-one">
-          <h4 class="skl_stack-title"><span><img src="./assets/Rectangle 55.png" alt="vector"></span>Language</h4>
+          <h4 class="skl_stack-title">
+            <span><img src="./assets/Rectangle 55.png" alt="vector" /></span
+            >Language
+          </h4>
           <ul class="abt-tec">
             <li class="skill">Javascript</li>
             <li class="skill">Ruby</li>
@@ -209,7 +216,10 @@
           </ul>
         </div>
         <div class="skill_stack">
-          <h4 class="skl_stack-title"><span><img src="./assets/Rectangle 56.png" alt="vector"></span>Frameworks</h4>
+          <h4 class="skl_stack-title">
+            <span><img src="./assets/Rectangle 56.png" alt="vector" /></span
+            >Frameworks
+          </h4>
           <ul class="abt-tec">
             <li class="skill">React.js</li>
             <li class="skill">Ruby on Rails</li>
@@ -219,7 +229,10 @@
           </ul>
         </div>
         <div class="skill_stack">
-          <h4 class="skl_stack-title"><span ><img src="./assets/Rectangle 57.png" alt="vector"></span >Skills</h4>
+          <h4 class="skl_stack-title">
+            <span><img src="./assets/Rectangle 57.png" alt="vector" /></span
+            >Skills
+          </h4>
           <ul class="abt-tec">
             <li class="skill">Database Management</li>
             <li class="skill">Version Control</li>
@@ -230,6 +243,71 @@
         </div>
       </div>
     </section>
+    <section id="contact">
+      <div class="contact_text">
+        <p class="cont_text">
+          I'm always interested in hearing about new projects, so if you'd like
+          to chat please get in touch.
+        </p>
+      </div>
+      <form action="https://formspree.io/f/xpznwejk" method="post" id="form">
+        <fieldset>
+          <label class="input-grp">
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              maxlength="30"
+              placeholder="Full Name"
+              required
+            />
+          </label>
+          <label class="input-grp">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+          </label>
+          <label class="input-grp_msg">
+            <textarea
+              name="msg"
+              id="msg"
+              cols="30"
+              rows="10"
+              minlength="30"
+              maxlength="500"
+              placeholder="Write me something..."
+              required
+            ></textarea>
+          </label>
+          <button class="submit_btn">Get in Touch</button>
+        </fieldset>
+      </form>
+    </section>
+    <footer id="footer">
+      <ul class="footer_icon-links">
+        <li class="footer_icon">
+          <a href=""><i class="footer_icon-icon fa-brands fa-github"></i></a>
+        </li>
+
+        <li class="footer_icon">
+          <a href=""><i class="footer_icon-icon fa-brands fa-linkedin"></i></a>
+        </li>
+        <li class="footer_icon">
+          <a href=""><img class="footer_icon-img" src="./assets/Vector.png" alt="vector" /></a>
+        </li>
+        <li class="footer_icon">
+          <a href=""><i class="footer_icon-icon fa-brands fa-twitter"></i></a>
+        </li>
+
+        <li class="footer_icon">
+          <a href=""><i class="footer_icon-icon fa-solid fa-m"></i></a>
+        </li>
+      </ul>
+    </footer>
 
     <script src="index.js"></script>
   </body>
