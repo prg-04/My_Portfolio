@@ -171,9 +171,9 @@ body {
   color: #505f79;
 }
 
-#footer .footer_icon-links .footer_icon .fototer_icon-img {
+#footer .footer_icon-links .footer_icon .footer_icon-img {
   height: 1.8rem;
-  filter: invert(70%);
+  filter: invert(100%);
 }
 
 #portfolio {
