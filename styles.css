@@ -38,6 +38,24 @@ body {
   font-size: 1.125rem;
   line-height: 1.5rem;
   color: #fff;
+  text-transform: uppercase;
+  animation: tracking-in-contract 3s ease-in;
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }
 
 #navigation .navlinks {
@@ -45,10 +63,14 @@ body {
   margin-right: 1.5rem;
 }
 
+.links a {
+  padding: 1.5rem;
+}
+
 #navigation .navlinks .links {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 #navigation .navlinks .links li a {
@@ -152,6 +174,19 @@ body {
 
 #navigation .toggle.open .menu::after {
   transform: rotate(-45deg) translate(24px, 24px);
+}
+
+.loading-bar {
+  position: relative;
+  width: 0%;
+  height: 3px;
+  background-color: #ff6b00;
+  top: 24px;
+  transition: width 500ms;
+}
+
+.links a:hover ~ .loading-bar {
+  width: 100%;
 }
 
 #footer {
@@ -289,6 +324,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  border: 5px solid white;
+  border-image: url(http://maxschulmeister.com/sneakin/assets/images/svg/scanframe.svg) 5 round;
 }
 
 #portfolio .card .card_title {
@@ -361,6 +399,182 @@ body {
   background-size: 427px;
 }
 
+#portfolio .card:hover {
+  transition: color 3s ease-in-out;
+}
+
+#portfolio .card::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  padding-right: 5px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px solid #ff6b00;
+  border-right: 5px solid #ff6b00;
+  visibility: hidden;
+}
+
+#portfolio .card::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding-left: 5px;
+  width: 100%;
+  height: 100%;
+  border-top: 5px solid #ff6b00;
+  border-left: 5px solid #ff6b00;
+  visibility: hidden;
+}
+
+#portfolio .card:hover::before {
+  animation: topleft 1s ease-in-out forwards;
+}
+
+#portfolio .card:hover::after {
+  animation: bottomright 1s ease-in-out forwards;
+}
+
+@keyframes bottomright {
+  0% {
+    width: 0;
+    height: 0;
+    padding-top: 0;
+    visibility: visible;
+  }
+
+  25% {
+    width: 100%;
+    height: 0;
+    padding-top: 0;
+    visibility: visible;
+  }
+
+  50% {
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+  }
+
+  75% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes revbottomright {
+  0% {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+
+  25% {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+
+  50% {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+
+  75% {
+    width: 100%;
+    height: 0;
+    padding-top: 0;
+    visibility: visible;
+  }
+
+  100% {
+    width: 0;
+    height: 0;
+    padding-top: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes topleft {
+  0% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+
+  25% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+
+  75% {
+    width: 100%;
+    height: 0;
+    padding-bottom: 0;
+    visibility: visible;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes revtopleft {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  25% {
+    width: 100%;
+    height: 0;
+    padding-bottom: 0;
+    visibility: visible;
+  }
+
+  50% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+
+  75% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+  }
+}
+
 #portfolio .card_2,
 #portfolio .card_5 {
   background-image: url("./assets/card_2.png");
@@ -399,7 +613,30 @@ body {
   font-size: 3.5rem;
   line-height: 4rem;
   letter-spacing: 0.37px;
-  color: #ff6b00;
+  color: rgba(255, 107, 0, 1);
+  animation: 4s fadein ease-in;
+}
+
+@keyframes fadein {
+  0% {
+    color: rgba(255, 107, 0, 0);
+  }
+
+  25% {
+    color: rgba(255, 107, 0, 0.15);
+  }
+
+  50% {
+    color: rgba(255, 107, 0, 0.4);
+  }
+
+  75% {
+    color: rgba(255, 107, 0, 0.65);
+  }
+
+  100% {
+    color: rgba(255, 107, 0, 90);
+  }
 }
 
 #hero .hero_text .subtitle {
@@ -409,6 +646,38 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
   color: #fff5e1;
+  margin-top: 0;
+  animation: 2.5s slidein ease-in;
+}
+
+@keyframes slidein {
+  0% {
+    margin-top: 30px;
+  }
+
+  15% {
+    margin-top: 25px;
+  }
+
+  30% {
+    margin-top: 20px;
+  }
+
+  450% {
+    margin-top: 15px;
+  }
+
+  60% {
+    margin-top: 10px;
+  }
+
+  75% {
+    margin-top: 5px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
 }
 
 #hero .hero_text .text {
@@ -614,6 +883,7 @@ body {
   width: 100%;
   height: 40px;
   border: none;
+  padding-left: 5px;
   margin-bottom: 0.5rem;
 }
 
@@ -628,13 +898,16 @@ body {
 
 #contact #form .input-grp_msg textarea {
   width: 100%;
+  height: 25px;
   border: none;
   background-color: #fbf8f7;
-  padding: 1rem 0;
+  padding: 1rem 5px;
+  transition: width 2s, height 2s, background-color 2s, rotate 2s;
 }
 
 #contact #form .input-grp_msg textarea:focus {
   outline: none;
+  height: 200px;
 }
 
 #contact #form .submit_btn {
