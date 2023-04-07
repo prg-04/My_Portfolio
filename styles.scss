@@ -621,6 +621,7 @@ $default-bg-size: 100px;
           height: 40px;
           border: none;
           margin-bottom: 0.5rem;
+          padding-left: 1rem;
 
           &:focus {
             outline: none;
@@ -636,8 +637,8 @@ $default-bg-size: 100px;
       textarea {
         width: 100%;
         border: none;
-        background-color: #fbf8f7;
-        padding: 1rem 0;
+        background-color: #f0eded;
+        padding: 1rem;
 
         &:focus {
           outline: none;
@@ -779,8 +780,14 @@ $default-bg-size: 100px;
     }
   }
 
+  hr {
+    height: 1px;
+    width: 100%;
+    margin: 2rem 0 1rem;
+  }
+
   #footer {
-    margin-top: 4rem;
+    margin-top: 1rem;
 
     .footer_icon-links {
       gap: 2rem;

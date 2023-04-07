@@ -614,6 +614,7 @@ body {
   height: 40px;
   border: none;
   margin-bottom: 0.5rem;
+  padding-left: 1rem;
 }
 
 #contact #form fieldset .input-grp input:focus {
@@ -628,8 +629,8 @@ body {
 #contact #form .input-grp_msg textarea {
   width: 100%;
   border: none;
-  background-color: #fbf8f7;
-  padding: 1rem 0;
+  background-color: #f0eded;
+  padding: 1rem;
 }
 
 #contact #form .input-grp_msg textarea:focus {
@@ -764,8 +765,14 @@ body {
     align-self: start;
   }
 
+  hr {
+    height: 1px;
+    width: 100%;
+    margin: 2rem 0 1rem;
+  }
+
   #footer {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 
   #footer .footer_icon-links {
