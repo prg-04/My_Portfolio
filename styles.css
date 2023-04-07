@@ -173,7 +173,6 @@ body {
 
 #footer .footer_icon-links .footer_icon .footer_icon-img {
   height: 1.8rem;
-  filter: invert(100%);
 }
 
 #portfolio {
@@ -433,12 +432,12 @@ body {
 }
 
 #hero .hero_icons .icon_links .icon i {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #dbd8d7;
 }
 
 #hero .hero_icons .icon_links .icon img {
-  height: 1.8rem;
+  height: 1.5rem;
 }
 
 #about {
@@ -615,6 +614,7 @@ body {
   height: 40px;
   border: none;
   margin-bottom: 0.5rem;
+  padding-left: 1rem;
 }
 
 #contact #form fieldset .input-grp input:focus {
@@ -629,8 +629,8 @@ body {
 #contact #form .input-grp_msg textarea {
   width: 100%;
   border: none;
-  background-color: #fbf8f7;
-  padding: 1rem 0;
+  background-color: #f0eded;
+  padding: 1rem;
 }
 
 #contact #form .input-grp_msg textarea:focus {
@@ -664,6 +664,10 @@ body {
 }
 
 @media screen and (min-width: 48rem) {
+  #navigation {
+    padding: 0 5rem;
+  }
+
   #navigation .navlinks {
     display: block;
   }
@@ -700,9 +704,15 @@ body {
     line-height: 32px;
   }
 
+  #hero .hero_icons {
+    margin-top: 5rem;
+    margin-left: -2rem;
+    margin-right: 2rem;
+  }
+
   #hero .hero_icons ul {
     flex-direction: column;
-    margin-top: 6rem;
+    margin-top: 8rem;
     width: 5rem;
     align-items: center;
   }
@@ -755,8 +765,14 @@ body {
     align-self: start;
   }
 
+  hr {
+    height: 1px;
+    width: 100%;
+    margin: 2rem 0 1rem;
+  }
+
   #footer {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 
   #footer .footer_icon-links {
