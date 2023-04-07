@@ -676,6 +676,7 @@ $default-bg-size: 100px;
 @media screen and (min-width: 48rem) {
   #navigation {
     padding: 0 5rem;
+
     .navlinks {
       display: block;
     }
@@ -716,6 +717,7 @@ $default-bg-size: 100px;
       margin-top: 5rem;
       margin-left: -2rem;
       margin-right: 2rem;
+
       ul {
         flex-direction: column;
         margin-top: 8rem;
