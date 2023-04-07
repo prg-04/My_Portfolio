@@ -175,7 +175,6 @@ $default-bg-size: 100px;
 
       .footer_icon-img {
         height: 1.8rem;
-        filter: invert(100%);
       }
     }
   }
@@ -440,12 +439,12 @@ $default-bg-size: 100px;
 
       .icon {
         i {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           color: #dbd8d7;
         }
 
         img {
-          height: 1.8rem;
+          height: 1.5rem;
         }
       }
     }
@@ -676,6 +675,7 @@ $default-bg-size: 100px;
 
 @media screen and (min-width: 48rem) {
   #navigation {
+    padding: 0 5rem;
     .navlinks {
       display: block;
     }
@@ -713,9 +713,12 @@ $default-bg-size: 100px;
     }
 
     .hero_icons {
+      margin-top: 5rem;
+      margin-left: -2rem;
+      margin-right: 2rem;
       ul {
         flex-direction: column;
-        margin-top: 6rem;
+        margin-top: 8rem;
         width: 5rem;
         align-items: center;
       }
