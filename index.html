@@ -9,9 +9,15 @@
       src="https://kit.fontawesome.com/0ec53d8e70.js"
       crossorigin="anonymous"
     ></script>
+     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="animate-on-scroll">
     <header id="navigation">
       <a href="/" class="logo">
         <h3>Evans</h3>
@@ -37,16 +43,25 @@
 
     <section id="hero">
       <div class="hero_text">
-        <h1 class="title">
-          Hey There <br />
-          I'm Evans.
+
+        <h1 class="text-slider-items"> Hey There <br />
+          I'm Evans.</h1>
+        <h1 class="title text-slider">
+          
         </h1>
-        <h2 class="subtitle">I'm a Software Developer</h2>
-        <p class="text">
+
+
+
+
+        <!-- <h2 class="text-slider-items"></h2> -->
+        <h2 class="subtitle slide-in-fwd-center">I'm a Software Developer</h2>
+
+        <p class="text slide-in-fwd-center">
           I can help you build a product , feature or website Look through some
           of my work and experience! If you like what you see and have a project
           you need coded, don’t hesitate to contact me.
         </p>
+        
       </div>
       <div class="hero_icons">
         <ul class="icon_links">
@@ -77,10 +92,10 @@
       </div>
       <div class="cards">
         <div class="placeholder">
-          <div class="plchdr_img">
+          <div class="plchdr_img" data-aos="fade-down-right">
             <img src="./assets/Img_Placeholder.png" alt="yoga" />
           </div>
-          <div class="plchdr_text">
+          <div class="plchdr_text" data-aos="fade-down-left">
             <h3>Multi Post Stories</h3>
             <p class="description">
               A daily selection of privately personalized reads; no accounts or
@@ -97,7 +112,7 @@
             <button type="button">See Project</button>
           </div>
         </div>
-        <div class="card card_1">
+        <div class="card card_1" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h3 class="card_title">
             Professional Art <br />
             Printing Data
@@ -113,7 +128,7 @@
           </ul>
           <button class="card_btn" type="button">See Project</button>
         </div>
-        <div class="card card_2">
+        <div class="card card_2" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
           <h3 class="card_title">
             Professional Art <br />
             Printing Data
@@ -129,7 +144,7 @@
           </ul>
           <button class="card_btn" type="button">See Project</button>
         </div>
-        <div class="card card_3">
+        <div class="card card_3" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
           <h3 class="card_title">
             Professional Art <br />
             Printing Data
@@ -145,7 +160,7 @@
           </ul>
           <button class="card_btn" type="button">See Project</button>
         </div>
-        <div class="card card_4">
+        <div class="card card_4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h3 class="card_title">
             Professional Art <br />
             Printing Data
@@ -161,7 +176,7 @@
           </ul>
           <button class="card_btn" type="button">See Project</button>
         </div>
-        <div class="card card_5">
+        <div class="card card_5" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
           <h3 class="card_title">
             Professional Art <br />
             Printing Data
@@ -177,7 +192,7 @@
           </ul>
           <button class="card_btn" type="button">See Project</button>
         </div>
-        <div class="card card_6">
+        <div class="card card_6" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
           <h3 class="card_title">
             Professional Art <br />
             Printing Data
@@ -196,7 +211,7 @@
       </div>
     </section>
     <section id="about">
-      <div class="about_me">
+      <div class="about_me" data-aos="zoom-in-down">
         <h2 class="abt_title">About me</h2>
         <p class="abt_description">
           Hey there! I can help you build a product, feature or website. Look
@@ -207,8 +222,9 @@
       </div>
       <hr class="abt_line" />
       <div class="experience">
-        <div class="skill_stack stack-one">
-          <h3 class="skl_stack-title">
+        <div class="skill_stack stack-one" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <h4 class="skl_stack-title">
+
             <span><img src="./assets/Rectangle 55.png" alt="vector" /></span
             >Language
           </h4>
@@ -219,8 +235,9 @@
             <li class="skill">css</li>
           </ul>
         </div>
-        <div class="skill_stack">
-          <h3 class="skl_stack-title">
+        <div class="skill_stack" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
+          <h4 class="skl_stack-title">
+
             <span><img src="./assets/Rectangle 56.png" alt="vector" /></span
             >Frameworks
           </h4>
@@ -232,8 +249,9 @@
             <li class="skill">Selenium</li>
           </ul>
         </div>
-        <div class="skill_stack">
-          <h3 class="skl_stack-title">
+        <div class="skill_stack" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+          <h4 class="skl_stack-title">
+
             <span><img src="./assets/Rectangle 57.png" alt="vector" /></span
             >Skills
           </h4>
@@ -248,13 +266,13 @@
       </div>
     </section>
     <section id="contact">
-      <div class="contact_text">
+      <div class="contact_text" data-aos="fade-down-right">
         <p class="cont_text">
           I'm always interested in hearing about new projects, so if you'd like
           to chat please get in touch.
         </p>
       </div>
-      <form action="https://formspree.io/f/xpznwejk" method="post" id="form">
+      <form action="https://formspree.io/f/xpznwejk" method="post" id="form" data-aos="fade-down-left">
         <fieldset>
           <label class="input-grp">
             <input
@@ -318,6 +336,14 @@
         </li>
       </ul>
     </footer>
+     <script src=
+        "./typed.js-master/lib/typed.min.js">
+    </script>
+     
+    <!-- Add jquery cdn -->
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
 
     <script src="index.js"></script>
   </body>

@@ -24,6 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 #navigation .logo {
@@ -386,11 +387,6 @@ body {
   flex-direction: column;
 }
 
-#hero .hero_text {
-  margin-top: 3.5rem;
-  max-width: 35.375rem;
-}
-
 #hero .hero_text .title {
   font-family: "Crete Round", serif;
   font-style: normal;
@@ -420,6 +416,42 @@ body {
   color: #fff;
   margin-top: 0.5rem;
   width: 90%;
+}
+
+#hero .hero_text .slide-in-fwd-center {
+  animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s both;
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+#hero .hero_text .text-slider-items {
+  display: none;
+}
+
+#hero .hero_text .slide-in-tl {
+  animation: slide-in-tl 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-tl {
+  0% {
+    transform: translateY(-1000px) translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
 }
 
 #hero .hero_icons {
@@ -692,16 +724,12 @@ body {
     margin-top: 3rem;
     font-size: 72px;
     line-height: 82px;
+    width: 60%;
   }
 
   #hero .hero_text .subtitle {
     font-size: 32px;
     line-height: 44px;
-  }
-
-  #hero .hero_text .text {
-    font-size: 20px;
-    line-height: 32px;
   }
 
   #hero .hero_icons {
