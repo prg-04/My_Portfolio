@@ -6,11 +6,17 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  outline: 1px solid red
+}
+
+hr {
+  width: 90%;
 }
 
 html,
 body {
   width: fit-content;
+  
 }
 
 $default-bg-size: 100px;
@@ -827,7 +833,7 @@ $default-bg-size: 100px;
 
     .contact_text {
       width: 40%;
-      margin-left: 5rem;
+      margin-left: 1rem;
       margin-top: 2rem;
 
       .cont_text {
