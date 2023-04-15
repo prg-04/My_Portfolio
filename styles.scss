@@ -8,6 +8,10 @@
   list-style: none;
 }
 
+hr {
+  width: 90%;
+}
+
 html,
 body {
   width: fit-content;
@@ -827,7 +831,7 @@ $default-bg-size: 100px;
 
     .contact_text {
       width: 40%;
-      margin-left: 5rem;
+      margin-left: 1rem;
       margin-top: 2rem;
 
       .cont_text {

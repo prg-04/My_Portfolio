@@ -8,6 +8,10 @@
   list-style: none;
 }
 
+hr {
+  width: 90%;
+}
+
 html,
 body {
   width: -moz-fit-content;
@@ -385,6 +389,11 @@ body {
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
+}
+
+#hero .hero_text {
+  margin-top: 3.5rem;
+  max-width: 35.375rem;
 }
 
 #hero .hero_text .title {
@@ -768,7 +777,7 @@ body {
 
   #contact .contact_text {
     width: 40%;
-    margin-left: 5rem;
+    margin-left: 1rem;
     margin-top: 2rem;
   }
 
