@@ -295,97 +295,102 @@ $default-bg-size: 100px;
     }
   }
 
-  .card {
-    max-width: 427px;
-    height: 485px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .card_div {
 
-    .card_title {
-      font-family: "Crete Round", serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 44px;
-      color: #fff;
-      margin-top: 12rem;
-      padding-left: 1rem;
-    }
-
-    .card_description {
-      font-family: "Inter", sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      color: #fff;
-      padding-left: 1rem;
-    }
-
-    .tech_stack {
+    .card {
+      max-width: 427px;
+      height: 485px;
       display: flex;
-      gap: 1rem;
-      margin: 1rem;
-
-      .tech {
+      flex-direction: column;
+      justify-content: space-between;
+    
+      .card_title {
+        font-family: "Crete Round", serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 44px;
+        color: #fff;
+        margin-top: 12rem;
+        padding-left: 1rem;
+      }
+    
+      .card_description {
         font-family: "Inter", sans-serif;
         font-style: normal;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
         color: #fff;
+        padding-left: 1rem;
+      }
+    
+      .tech_stack {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem;
+    
+        .tech {
+          font-family: "Inter", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 20px;
+          color: #fff;
+          padding: 12px;
+          background: rgba(255, 255, 255, 0.24);
+        }
+      }
+    
+      .card_btn {
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+        color: #fff;
+        background: #ff6b00;
         padding: 12px;
-        background: rgba(255, 255, 255, 0.24);
+        border: none;
+        width: 100%;
+        align-self: self-end;
+    
+        &:hover {
+          color: #f55800;
+          background-color: #fff5e1;
+          border: 1px solid #f55800;
+        }
+    
+        &:visited {
+          color: #f4f1f0;
+          background-color: #e05304;
+        }
       }
     }
-
-    .card_btn {
-      font-family: "Inter", sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 17px;
-      line-height: 24px;
-      color: #fff;
-      background: #ff6b00;
-      padding: 12px;
-      border: none;
-      width: 100%;
-      align-self: self-end;
-
-      &:hover {
-        color: #f55800;
-        background-color: #fff5e1;
-        border: 1px solid #f55800;
-      }
-
-      &:visited {
-        color: #f4f1f0;
-        background-color: #e05304;
-      }
+    
+    .card_1,
+    .card_4 {
+      background-image: url("./assets/card-1.png");
+      background-repeat: no-repeat;
+      background-size: 427px;
+    }
+    
+    .card_2,
+    .card_5 {
+      background-image: url("./assets/card_2.png");
+      background-repeat: no-repeat;
+      background-size: 427px;
+    }
+    
+    .card_3,
+    .card_6 {
+      background-image: url("./assets/card_3.png");
+      background-repeat: no-repeat;
+      background-size: 427px;
     }
   }
 
-  .card_1,
-  .card_4 {
-    background-image: url("./assets/card-1.png");
-    background-repeat: no-repeat;
-    background-size: 427px;
-  }
-
-  .card_2,
-  .card_5 {
-    background-image: url("./assets/card_2.png");
-    background-repeat: no-repeat;
-    background-size: 427px;
-  }
-
-  .card_3,
-  .card_6 {
-    background-image: url("./assets/card_3.png");
-    background-repeat: no-repeat;
-    background-size: 427px;
-  }
+ 
 }
 
 #hero {
@@ -901,7 +906,8 @@ $default-bg-size: 100px;
       }
     }
 
-    .cards {
+    .card_div {
+      .cards {
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
 
@@ -960,6 +966,7 @@ $default-bg-size: 100px;
           }
         }
       }
+    }
     }
   }
 
