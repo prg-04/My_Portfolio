@@ -1,6 +1,3 @@
-import Typed from 'typed.js';
-import gsap from 'gsap';
-import ScrollMagic from 'scrollmagic';
 import { cardsData, modalData } from './constants/constants.js';
 
 const toggle = document.querySelector('.toggle');
@@ -18,31 +15,11 @@ links.forEach((link) => {
     navlinks.classList.remove('open');
   });
 });
-if ('jQuery'('.text-slider').length === 1) {
-  let typedStrings = 'jQuery'('.text-slider-items').html();
-  typedStrings = typedStrings.replace(/,\s/g, '<br />');
-  // eslint-disable-next-line no-unused-vars
-  const typed = new Typed('.text-slider', {
-    strings: typedStrings.split('<br />'),
-    typeSpeed: 50,
-    loop: false,
-    backDelay: 100,
-    backSpeed: 30,
-  });
-}
-
-'jQuery'(window).scroll(() => {
-  'jQuery'('.animate-on-scroll').each(function scrll() {
-    const position = 'jQuery'(this).offset().top;
-    const scrollPosition = 'jQuery'(window).scrollTop();
-    if (position < scrollPosition + 'jQuery'(window).height()) {
-      'jQuery'(this).addClass('animated');
-    }
-  });
-});
 
 const { title } = cardsData[0];
+
 const portfolio = document.getElementById('portfolio');
+
 function makeDiv() {
   const div = document.createElement('div');
   return div;
@@ -88,7 +65,7 @@ cardsDiv.innerHTML = cardsData.map((item) => {
             <button type="button" class="bttn">${button}</button>
           </div>
         </div>
-       <div class="card card_1" data-scrollmagic="fade-right" data-scrollmagic-offset="300" data-scrollmagic-easing="ease-in-sine" data-scrollmagic-id="card_1">
+       <div class="card card_1" >
 
           <h3 class="card_title">
             ${title2[0]}<br />
@@ -104,7 +81,7 @@ cardsDiv.innerHTML = cardsData.map((item) => {
           </ul>
           <button class="card_btn bttn" type="button">${btn}</button>
         </div>
-        <div class="card card_2" data-scrollmagic="fade-right" data-scrollmagic-offset="400" data-scrollmagic-easing="ease-in-sine" data-scrollmagic-id="card_2">
+        <div class="card card_2" >
 
           <h3 class="card_title">
             ${title2[0]}<br />
@@ -120,7 +97,7 @@ cardsDiv.innerHTML = cardsData.map((item) => {
           </ul>
           <button class="card_btn bttn" type="button">${btn}</button>
         </div>
-        <div class="card card_3" data-scrollmagic="fade-right" data-scrollmagic-offset="500" data-scrollmagic-easing="ease-in-sine" data-scrollmagic-id="card_3">
+        <div class="card card_3" >
 
           <h3 class="card_title">
             ${title2[0]}<br />
@@ -136,7 +113,7 @@ cardsDiv.innerHTML = cardsData.map((item) => {
           </ul>
           <button class="card_btn bttn" type="button">${btn}</button>
           </div>
-          <div class="card card_4" data-scrollmagic="fade-right" data-scrollmagic-offset="300" data-scrollmagic-easing="ease-in-sine" data-scrollmagic-id="card_4">
+          <div class="card card_4" >
 
           <h3 class="card_title">
             ${title2[0]}<br />
@@ -152,7 +129,7 @@ cardsDiv.innerHTML = cardsData.map((item) => {
           </ul>
           <button class="card_btn bttn" type="button">${btn}</button>
         </div>
-        <div class="card card_5" data-scrollmagic="fade-right" data-scrollmagic-offset="400" data-scrollmagic-easing="ease-in-sine" data-scrollmagic-id="card_5">
+        <div class="card card_5" >
 
           <h3 class="card_title">
             ${title2[0]}<br />
@@ -168,7 +145,7 @@ cardsDiv.innerHTML = cardsData.map((item) => {
           </ul>
           <button class="card_btn bttn" type="button">${btn}</button>
         </div>
-        <div class="card card_6" data-scrollmagic="fade-right" data-scrollmagic-offset="500" data-scrollmagic-easing="ease-in-sine" data-scrollmagic-id="card_6">
+        <div class="card card_6" >
 
           <h3 class="card_title">
             ${title2[0]}<br />
@@ -242,134 +219,6 @@ popup.innerHTML = modalData.map((item) => {
 });
 
 portfolio.appendChild(popup);
-
-const controller = new ScrollMagic.Controller();
-
-document.querySelectorAll('.card').forEach((card) => {
-  const animation = card.getAttribute('data-scrollmagic');
-  const offset = parseInt(card.getAttribute('data-scrollmagic-offset'), 10);
-  const easing = card.getAttribute('data-scrollmagic-easing');
-  new ScrollMagic.Scene({
-    triggerElement: card,
-    triggerHook: 0.8,
-    offset,
-    reverse: true,
-  })
-    .setClassToggle(card, animation)
-    .addTo(controller)
-    .on('enter', () => {
-      card.classList.add(animation);
-    })
-    .on('leave', () => {
-      card.classList.remove(animation);
-    })
-    .setTween(
-      gsap.fromTo(
-        card,
-        1,
-        {
-          opacity: 0,
-          y: 20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          ease: easing,
-        },
-      ),
-    );
-});
-
-const aboutMe = document.querySelector('.about_me');
-new ScrollMagic.Scene({
-  triggerElement: aboutMe,
-  triggerHook: 0.8,
-})
-  .setTween(
-    gsap.fromTo(
-      aboutMe,
-      1,
-      {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        ease: 'ease-in',
-      },
-    ),
-  )
-  .addTo(controller);
-
-const skillStack1 = document.querySelector('.stack-one');
-new ScrollMagic.Scene({
-  triggerElement: skillStack1,
-  triggerHook: 0.8,
-  offset: 300,
-})
-  .setTween(
-    gsap.fromTo(
-      skillStack1,
-      1,
-      {
-        opacity: 0,
-        x: -20,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        ease: 'ease-in',
-      },
-    ),
-  )
-  .addTo(controller);
-
-const skillStack2 = document.querySelector('.skill_stack:nth-child(2)');
-new ScrollMagic.Scene({
-  triggerElement: skillStack2,
-  triggerHook: 0.8,
-  offset: 400,
-})
-  .setTween(
-    gsap.fromTo(
-      skillStack2,
-      1,
-      {
-        opacity: 0,
-        x: -20,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        ease: 'ease-in',
-      },
-    ),
-  )
-  .addTo(controller);
-
-const skillStack3 = document.querySelector('.skill_stack:nth-child(3)');
-new ScrollMagic.Scene({
-  triggerElement: skillStack3,
-  triggerHook: 0.8,
-  offset: 500,
-})
-  .setTween(
-    gsap.fromTo(
-      skillStack3,
-      1,
-      {
-        opacity: 0,
-        x: -20,
-      },
-      {
-        opacity: 1,
-        x: -15,
-        ease: 'ease-in',
-      },
-    ),
-  )
-  .addTo(controller);
 
 const btns = document.querySelectorAll('.bttn');
 const modal = document.querySelector('.modal');
