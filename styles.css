@@ -16,6 +16,7 @@ hr {
   height: 1px;
   width: 90%;
   margin: 2rem 2rem 1rem;
+
 }
 
 .blur.open {
@@ -997,6 +998,7 @@ hr {
 
   #hero .hero_text {
     width: 35rem;
+
   }
 
   #hero .hero_text .title {
