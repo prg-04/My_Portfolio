@@ -4,22 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evans_Portfolio</title>
     <script
       src="https://kit.fontawesome.com/0ec53d8e70.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.15"></script>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/scrollmagic/uncompressed/ScrollMagic.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script type="application/node" src="https://cdn.jsdelivr.net/npm/typed.js@2.0.15"></script>
     <!-- Add jquery cdn -->
+    <link
+      href="http://127.0.0.1:5500/css/animate.css?_cacheOverride=1681920797398"
+    />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="css/animate.css" />
 
     <link rel="stylesheet" href="styles.css" />
+    <title>Evans_Portfolio</title>
   </head>
   <body class="animate-on-scroll">
     <header id="navigation">
@@ -30,18 +39,15 @@
         <ul class="links">
           <li class="link">
             <a href="#portfolio">Portfolio</a>
-            <div class="loading-bar"></div>
           </li>
           <li class="link">
             <a href="#about">About</a>
-            <div class="loading-bar"></div>
           </li>
           <li class="link">
             <a href="#contact">Contact</a>
-            <div class="loading-bar"></div>
           </li>
-          <li>
-            <a href="#" aria-label="contact" role="link"
+          <li class="link">
+            <a href="/" aria-label="contact" role="link"
               ><i class="fa-regular fa-envelope"></i
             ></a>
           </li>
@@ -51,8 +57,7 @@
         <div class="menu"></div>
       </div>
     </header>
-
-    <section id="hero">
+    <section id="hero" class="blur">
       <div class="hero_text">
         <h1 class="text-slider-items">
           Hey There <br />
@@ -60,7 +65,6 @@
         </h1>
         <h1 class="title text-slider"></h1>
 
-        <!-- <h2 class="text-slider-items"></h2> -->
         <h2 class="subtitle slide-in-fwd-center">I'm a Software Developer</h2>
 
         <p class="text slide-in-fwd-center">
@@ -102,39 +106,9 @@
         </ul>
       </div>
     </section>
-    <section id="portfolio">
-      <div class="modal">
-        <div class="heading">
-          <h3 class="modal_ttl title1">Keeping track of hundreds of components website</h3>
-          <h3 class="modal_ttl title2">Multi Post Stories</h3>
-          <ul class="modal_tech">
-            <li class="md_tech">html</li>
-            <li class="md_tech">bootstrap</li>
-            <li class="md_tech">Ruby on rails</li>
-          </ul> 
-        </div>
-        <div class="content">
-          <div class="image">
-            <img src="./assets/modal_desk.png" alt="portfolio" />
-          </div>
-          <div class="description">
-            <p class="modal_text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quae, voluptatum, quod, voluptas quibusdam voluptates quidem
-              voluptatibus quos quia quas nesciunt. Quisquam, quibusdam
-              voluptatibus. Quisquam, quibusdam voluptatibus. Quisquam, quibusdam
-              voluptatibus.
-            </p>
-            <div class="modal_buttons">
-              <button class="btn" type="button">See Live</button>
-              <button class="btn" type="button">See Source</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class="about_me" data-aos="zoom-in-down">
+    <section id="portfolio"></section>
+    <section id="about" class="blur">
+      <div class="about_me" data-scrollmagic="zoom-in-down">
         <h2 class="abt_title">About me</h2>
         <p class="abt_description">
           Hey there! I can help you build a product, feature or website. Look
@@ -147,9 +121,9 @@
       <div class="experience">
         <div
           class="skill_stack stack-one"
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
+          data-scrollmagic="fade-right"
+          data-scrollmagic-offset="300"
+          data-scrollmagic-easing="ease-in-sine"
         >
           <h4 class="skl_stack-title">
             <span><img src="./assets/Rectangle 55.png" alt="vector" /></span
@@ -164,9 +138,9 @@
         </div>
         <div
           class="skill_stack"
-          data-aos="fade-right"
-          data-aos-offset="400"
-          data-aos-easing="ease-in-sine"
+          data-scrollmagic="fade-right"
+          data-scrollmagic-offset="400"
+          data-scrollmagic-easing="ease-in-sine"
         >
           <h4 class="skl_stack-title">
             <span><img src="./assets/Rectangle 56.png" alt="vector" /></span
@@ -182,9 +156,9 @@
         </div>
         <div
           class="skill_stack"
-          data-aos="fade-right"
-          data-aos-offset="500"
-          data-aos-easing="ease-in-sine"
+          data-scrollmagic="fade-right"
+          data-scrollmagic-offset="500"
+          data-scrollmagic-easing="ease-in-sine"
         >
           <h4 class="skl_stack-title">
             <span><img src="./assets/Rectangle 57.png" alt="vector" /></span
@@ -200,7 +174,8 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+
+    <section id="contact" class="blur">
       <div class="contact_text" data-aos="fade-down-right">
         <p class="cont_text">
           I'm always interested in hearing about new projects, so if you'd like
@@ -287,7 +262,6 @@
         </li>
       </ul>
     </footer>
-
     <script type="module" src="index.js"></script>
   </body>
 </html>

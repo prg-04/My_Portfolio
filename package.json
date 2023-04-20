@@ -19,6 +19,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "typed": "^10.0.0-beta.2",
-    "typed.js": "^2.0.15"
+    "typed.js": "^2.0.15",
+    "wow.js": "^1.2.2"
   }
 }
