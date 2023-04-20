@@ -8,8 +8,10 @@ toggle.addEventListener('click', () => {
 });
 
 links.forEach((link) => {
+
   link.addEventListener('click', () => {
     toggle.classList.remove('open');
     navlinks.classList.remove('open');
   });
 });
+

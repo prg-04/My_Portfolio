@@ -8,6 +8,10 @@
   list-style: none;
 }
 
+hr {
+  width: 90%;
+}
+
 html,
 body {
   width: fit-content;
@@ -25,6 +29,7 @@ $default-bg-size: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 
   .logo {
     color: #f55800;
@@ -387,7 +392,7 @@ $default-bg-size: 100px;
   background-color: #1c1a19;
   height: 100%;
   background-image: url("./assets/hero_mob.png");
-  background-size: $default-bg-size*1.2;
+  background-size: $default-bg-size * 1.2;
   background-repeat: no-repeat;
   background-position: bottom right;
   padding: 5rem 2rem;
@@ -427,6 +432,82 @@ $default-bg-size: 100px;
       color: #fff;
       margin-top: 0.5rem;
       width: 90%;
+    }
+
+    .slide-in-fwd-center {
+      -webkit-animation:
+        slide-in-fwd-center 2s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s both;
+      animation:
+        slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s
+        both;
+    }
+
+    @-webkit-keyframes slide-in-fwd-center {
+      0% {
+        -webkit-transform: translateZ(-1400px);
+        transform: translateZ(-1400px);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-in-fwd-center {
+      0% {
+        -webkit-transform: translateZ(-1400px);
+        transform: translateZ(-1400px);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+      }
+    }
+
+    .text-slider-items {
+      display: none;
+    }
+
+    .slide-in-tl {
+      -webkit-animation:
+        slide-in-tl 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: slide-in-tl 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    @-webkit-keyframes slide-in-tl {
+      0% {
+        -webkit-transform: translateY(-1000px) translateX(-1000px);
+        transform: translateY(-1000px) translateX(-1000px);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-in-tl {
+      0% {
+        -webkit-transform: translateY(-1000px) translateX(-1000px);
+        transform: translateY(-1000px) translateX(-1000px);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
     }
   }
 
@@ -701,16 +782,12 @@ $default-bg-size: 100px;
         margin-top: 3rem;
         font-size: 72px;
         line-height: 82px;
+        width: 60%;
       }
 
       .subtitle {
         font-size: 32px;
         line-height: 44px;
-      }
-
-      .text {
-        font-size: 20px;
-        line-height: 32px;
       }
     }
 
@@ -754,7 +831,7 @@ $default-bg-size: 100px;
 
     .contact_text {
       width: 40%;
-      margin-left: 5rem;
+      margin-left: 1rem;
       margin-top: 2rem;
 
       .cont_text {
