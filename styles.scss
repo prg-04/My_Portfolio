@@ -819,6 +819,10 @@ $default-bg-size: 100px;
       height: 100%;
       border: none;
 
+      .err {
+        color: red;
+      }
+
       .input-grp {
         width: 100%;
         margin: 0.5rem 0;

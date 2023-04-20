@@ -173,6 +173,8 @@
               maxlength="30"
               placeholder="Full Name"
               required />
+            <span class="err fullNameErr">Error</span>
+            <span class="fullNValid">Valid</span>
           </label>
           <label class="input-grp">
             <input
@@ -181,6 +183,8 @@
               id="email"
               placeholder="Email Address"
               required />
+              <span class="err emailError">Error</span>
+            <span class="emailValid">Valid</span>
           </label>
           <label class="input-grp_msg">
             <textarea
@@ -192,8 +196,12 @@
               maxlength="500"
               placeholder="Write me something..."
               required></textarea>
+               <span class="err msgError">Error</span>
+            <span class="msgValid">Valid</span>
           </label>
           <button class="submit_btn" type="submit">Get in Touch</button>
+          <span class="err submitError">Error</span>
+          <span class="formValid">Valid</span>
         </fieldset>
       </form>
     </section>
