@@ -4,18 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evans_Portfolio</title>
     <script
       src="https://kit.fontawesome.com/0ec53d8e70.js"
       crossorigin="anonymous"
     ></script>
-     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/scrollmagic/uncompressed/ScrollMagic.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script type="application/node" src="https://cdn.jsdelivr.net/npm/typed.js@2.0.15"></script>
+    <!-- Add jquery cdn -->
+    <link
+      href="http://127.0.0.1:5500/css/animate.css?_cacheOverride=1681920797398"
+    />
 
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="css/animate.css" />
 
     <link rel="stylesheet" href="styles.css" />
+    <title>Evans_Portfolio</title>
   </head>
   <body class="animate-on-scroll">
     <header id="navigation">
@@ -24,15 +37,19 @@
       </a>
       <nav class="navlinks">
         <ul class="links">
-          <li class="link"><a href="#portfolio">Portfolio</a>
-            <div class="loading-bar"></div>
+          <li class="link">
+            <a href="#portfolio">Portfolio</a>
           </li>
-          <li class="link"><a href="#about">About</a>
-            <div class="loading-bar"></div></li>
-          <li class="link"><a href="#contact">Contact</a>
-            <div class="loading-bar"></div></li>
-          <li>
-            <a href="#" aria-label="contact" role="link" ><i class="fa-regular fa-envelope"></i></a>
+          <li class="link">
+            <a href="#about">About</a>
+          </li>
+          <li class="link">
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="link">
+            <a href="/" aria-label="contact" role="link"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
           </li>
         </ul>
       </nav>
@@ -40,20 +57,14 @@
         <div class="menu"></div>
       </div>
     </header>
-
-    <section id="hero">
+    <section id="hero" class="blur">
       <div class="hero_text">
-
-        <h1 class="text-slider-items"> Hey There <br />
-          I'm Evans.</h1>
-        <h1 class="title text-slider">
-          
+        <h1 class="text-slider-items">
+          Hey There <br />
+          I'm Evans.
         </h1>
+        <h1 class="title text-slider"></h1>
 
-
-
-
-        <!-- <h2 class="text-slider-items"></h2> -->
         <h2 class="subtitle slide-in-fwd-center">I'm a Software Developer</h2>
 
         <p class="text slide-in-fwd-center">
@@ -61,22 +72,32 @@
           of my work and experience! If you like what you see and have a project
           you need coded, don’t hesitate to contact me.
         </p>
-        
       </div>
       <div class="hero_icons">
         <ul class="icon_links">
           <li class="icon">
-            <a href="https://github.com/prg-04" aria-label="github link"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/prg-04" aria-label="github link"
+              ><i class="fa-brands fa-github"></i
+            ></a>
           </li>
 
           <li class="icon">
-            <a href="https://www.linkedin.com/in/evanson-karanja-3549841b8/" aria-label="visit my linkedin profile" role="link"><i class="fa-brands fa-linkedin"></i></a>
+            <a
+              href="https://www.linkedin.com/in/evanson-karanja-3549841b8/"
+              aria-label="visit my linkedin profile"
+              role="link"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
           </li>
           <li class="icon">
-            <a href="/" aria-label="reach out to me"><img src="./assets/Vector.png" alt="vector" /></a>
+            <a href="/" aria-label="reach out to me"
+              ><img src="./assets/Vector.png" alt="vector"
+            /></a>
           </li>
           <li class="icon">
-            <a href="/" aria-label="twitter account"><i class="fa-brands fa-twitter"></i></a>
+            <a href="/" aria-label="twitter account"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
           </li>
 
           <li class="icon">
@@ -85,133 +106,9 @@
         </ul>
       </div>
     </section>
-    <section id="portfolio">
-      <div class="title">
-        <h2>My Recent Works</h2>
-        <hr class="line" />
-      </div>
-      <div class="cards">
-        <div class="placeholder">
-          <div class="plchdr_img" data-aos="fade-down-right">
-            <img src="./assets/Img_Placeholder.png" alt="yoga" />
-          </div>
-          <div class="plchdr_text" data-aos="fade-down-left">
-            <h3>Multi Post Stories</h3>
-            <p class="description">
-              A daily selection of privately personalized reads; no accounts or
-              sign-ups required. This has been the industry's standard dummy
-              text ever since the 1500s, when an unknown printer took a standard
-              dummy text.
-            </p>
-            <ul>
-              <li>css</li>
-              <li>HTML</li>
-              <li>Bootstrap</li>
-              <li>Ruby</li>
-            </ul>
-            <button type="button">See Project</button>
-          </div>
-        </div>
-        <div class="card card_1" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <h3 class="card_title">
-            Professional Art <br />
-            Printing Data
-          </h3>
-          <p class="card_description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. Has been the industry's standard.
-          </p>
-          <ul class="tech_stack">
-            <li class="tech">HTML</li>
-            <li class="tech">Bootstrap</li>
-            <li class="tech">Ruby</li>
-          </ul>
-          <button class="card_btn" type="button">See Project</button>
-        </div>
-        <div class="card card_2" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
-          <h3 class="card_title">
-            Professional Art <br />
-            Printing Data
-          </h3>
-          <p class="card_description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. Has been the industry's standard.
-          </p>
-          <ul class="tech_stack">
-            <li class="tech">HTML</li>
-            <li class="tech">Bootstrap</li>
-            <li class="tech">Ruby</li>
-          </ul>
-          <button class="card_btn" type="button">See Project</button>
-        </div>
-        <div class="card card_3" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
-          <h3 class="card_title">
-            Professional Art <br />
-            Printing Data
-          </h3>
-          <p class="card_description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. Has been the industry's standard.
-          </p>
-          <ul class="tech_stack">
-            <li class="tech">HTML</li>
-            <li class="tech">Bootstrap</li>
-            <li class="tech">Ruby</li>
-          </ul>
-          <button class="card_btn" type="button">See Project</button>
-        </div>
-        <div class="card card_4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <h3 class="card_title">
-            Professional Art <br />
-            Printing Data
-          </h3>
-          <p class="card_description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. Has been the industry's standard.
-          </p>
-          <ul class="tech_stack">
-            <li class="tech">HTML</li>
-            <li class="tech">Bootstrap</li>
-            <li class="tech">Ruby</li>
-          </ul>
-          <button class="card_btn" type="button">See Project</button>
-        </div>
-        <div class="card card_5" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
-          <h3 class="card_title">
-            Professional Art <br />
-            Printing Data
-          </h3>
-          <p class="card_description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. Has been the industry's standard.
-          </p>
-          <ul class="tech_stack">
-            <li class="tech">HTML</li>
-            <li class="tech">Bootstrap</li>
-            <li class="tech">Ruby</li>
-          </ul>
-          <button class="card_btn" type="button">See Project</button>
-        </div>
-        <div class="card card_6" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
-          <h3 class="card_title">
-            Professional Art <br />
-            Printing Data
-          </h3>
-          <p class="card_description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required. Has been the industry's standard.
-          </p>
-          <ul class="tech_stack">
-            <li class="tech">HTML</li>
-            <li class="tech">Bootstrap</li>
-            <li class="tech">Ruby</li>
-          </ul>
-          <button class="card_btn" type="button">See Project</button>
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class="about_me" data-aos="zoom-in-down">
+    <section id="portfolio"></section>
+    <section id="about" class="blur">
+      <div class="about_me" data-scrollmagic="zoom-in-down">
         <h2 class="abt_title">About me</h2>
         <p class="abt_description">
           Hey there! I can help you build a product, feature or website. Look
@@ -222,9 +119,13 @@
       </div>
       <hr class="abt_line" />
       <div class="experience">
-        <div class="skill_stack stack-one" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <div
+          class="skill_stack stack-one"
+          data-scrollmagic="fade-right"
+          data-scrollmagic-offset="300"
+          data-scrollmagic-easing="ease-in-sine"
+        >
           <h4 class="skl_stack-title">
-
             <span><img src="./assets/Rectangle 55.png" alt="vector" /></span
             >Language
           </h4>
@@ -235,9 +136,13 @@
             <li class="skill">css</li>
           </ul>
         </div>
-        <div class="skill_stack" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
+        <div
+          class="skill_stack"
+          data-scrollmagic="fade-right"
+          data-scrollmagic-offset="400"
+          data-scrollmagic-easing="ease-in-sine"
+        >
           <h4 class="skl_stack-title">
-
             <span><img src="./assets/Rectangle 56.png" alt="vector" /></span
             >Frameworks
           </h4>
@@ -249,9 +154,13 @@
             <li class="skill">Selenium</li>
           </ul>
         </div>
-        <div class="skill_stack" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+        <div
+          class="skill_stack"
+          data-scrollmagic="fade-right"
+          data-scrollmagic-offset="500"
+          data-scrollmagic-easing="ease-in-sine"
+        >
           <h4 class="skl_stack-title">
-
             <span><img src="./assets/Rectangle 57.png" alt="vector" /></span
             >Skills
           </h4>
@@ -265,14 +174,20 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+
+    <section id="contact" class="blur">
       <div class="contact_text" data-aos="fade-down-right">
         <p class="cont_text">
           I'm always interested in hearing about new projects, so if you'd like
           to chat please get in touch.
         </p>
       </div>
-      <form action="https://formspree.io/f/xpznwejk" method="post" id="form" data-aos="fade-down-left">
+      <form
+        action="https://formspree.io/f/xpznwejk"
+        method="post"
+        id="form"
+        data-aos="fade-down-left"
+      >
         <fieldset>
           <label class="input-grp">
             <input
@@ -313,38 +228,40 @@
     <footer id="footer">
       <ul class="footer_icon-links">
         <li class="footer_icon">
-          <a href="https://github.com/prg-04" aria-label="github account"><i class="footer_icon-icon fa-brands fa-github"></i></a>
+          <a href="https://github.com/prg-04" aria-label="github account"
+            ><i class="footer_icon-icon fa-brands fa-github"></i
+          ></a>
         </li>
 
         <li class="footer_icon">
-          <a href="https://www.linkedin.com/in/evanson-karanja-3549841b8/" aria-label="visit my linkedin profile" role="link"><i class="footer_icon-icon fa-brands fa-linkedin"></i></a>
+          <a
+            href="https://www.linkedin.com/in/evanson-karanja-3549841b8/"
+            aria-label="visit my linkedin profile"
+            role="link"
+            ><i class="footer_icon-icon fa-brands fa-linkedin"></i
+          ></a>
         </li>
         <li class="footer_icon">
-          <a href="/"
-             aria-label="reach out to me"><img
+          <a href="/" aria-label="reach out to me"
+            ><img
               class="footer_icon-img"
               src="./assets/Vector(1).png"
               alt="vector"
           /></a>
         </li>
         <li class="footer_icon">
-          <a href="/" aria-label="contact me on twitter"><i class="footer_icon-icon fa-brands fa-twitter"></i></a>
+          <a href="/" aria-label="contact me on twitter"
+            ><i class="footer_icon-icon fa-brands fa-twitter"></i
+          ></a>
         </li>
 
         <li class="footer_icon">
-          <a href="/" aria-label="M link"><i class="footer_icon-icon fa-solid fa-m"></i></a>
+          <a href="/" aria-label="M link"
+            ><i class="footer_icon-icon fa-solid fa-m"></i
+          ></a>
         </li>
       </ul>
     </footer>
-     <script src=
-        "./typed.js-master/lib/typed.min.js">
-    </script>
-     
-    <!-- Add jquery cdn -->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
