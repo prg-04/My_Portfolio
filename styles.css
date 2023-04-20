@@ -9,7 +9,9 @@
 }
 
 hr {
+  height: 1px;
   width: 90%;
+  margin: 2rem 0 1rem;
 }
 
 html,
@@ -800,12 +802,6 @@ body {
 
   #contact #form fieldset .submit_btn {
     align-self: start;
-  }
-
-  hr {
-    height: 1px;
-    width: 100%;
-    margin: 2rem 0 1rem;
   }
 
   #footer {
