@@ -22,6 +22,11 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "typed.js": "^2.0.15"
+    "gsap": "^3.11.5",
+    "jquery": "^3.6.4",
+    "scrollmagic": "^2.0.8",
+    "typed": "^10.0.0-beta.2",
+    "typed.js": "^2.0.15",
+    "wow.js": "^1.2.2"
   }
 }
