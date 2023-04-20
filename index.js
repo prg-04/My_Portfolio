@@ -7,9 +7,3 @@ toggle.addEventListener("click", () => {
     navlinks.classList.toggle('open')
 });
 
-links.forEach((link) => {
-    link.addEventListener('click', () => {
-        toggle.classList.remove('open')
-        navlinks.classList.remove('open')
-    })
-})
