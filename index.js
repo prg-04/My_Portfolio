@@ -2,8 +2,12 @@ import { cardsData, modalData } from "./constants/constants.js";
 const toggle = document.querySelector(".toggle");
 const navlinks = document.querySelector(".navlinks");
 const links = document.querySelectorAll(".link");
+const navlinks = document.querySelector(".navlinks");
+const links = document.querySelectorAll(".link");
 
 toggle.addEventListener("click", () => {
+  toggle.classList.toggle("open");
+  navlinks.classList.toggle("open");
   toggle.classList.toggle("open");
   navlinks.classList.toggle("open");
 });
@@ -27,6 +31,15 @@ if ($(".text-slider").length == 1) {
     backSpeed: 30,
   });
 }
+
+$(window).scroll(function () {
+  $(".animate-on-scroll").each(function () {
+    var position = $(this).offset().top;
+    var scrollPosition = $(window).scrollTop();
+    if (position < scrollPosition + $(window).height()) {
+      $(this).addClass("animated");
+    }
+  });
 
 $(window).scroll(function () {
   $(".animate-on-scroll").each(function () {
