@@ -9,7 +9,9 @@
 }
 
 hr {
+  height: 1px;
   width: 90%;
+  margin: 2rem 0 1rem;
 }
 
 html,
@@ -855,12 +857,6 @@ $default-bg-size: 100px;
         }
       }
     }
-  }
-
-  hr {
-    height: 1px;
-    width: 100%;
-    margin: 2rem 0 1rem;
   }
 
   #footer {
