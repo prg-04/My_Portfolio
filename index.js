@@ -27,6 +27,8 @@ function makeDiv() {
 
 const titleDiv = makeDiv();
 titleDiv.className = 'title';
+titleDiv.classList.add('blur');
+
 titleDiv.innerHTML = `<h2>${title}</h2>`;
 
 const hr = document.createElement('hr');

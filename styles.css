@@ -369,9 +369,9 @@ hr {
 
 #portfolio .modal {
   position: fixed;
-  top: 3rem;
+  top: 0.5rem;
   left: 10px;
-  z-index: 20;
+  z-index: 40;
   background-color: #f4f1f0;
   width: 95%;
   height: 100%;
@@ -1161,7 +1161,7 @@ hr {
   }
 
   #portfolio .modal {
-    inset: 3.5rem 10% 3.5rem 6%;
+    inset: 1.5rem 2.5rem;
   }
 
   #portfolio .modal .content .description {
@@ -1170,5 +1170,11 @@ hr {
 
   #portfolio .modal .content .description .modal_buttons {
     margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #portfolio .modal {
+    inset: 1.5rem 8.5rem;
   }
 }
