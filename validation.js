@@ -66,4 +66,22 @@ function validateMsg() {
   return true;
 }
 
+function formValidate() {
+  if (
+    !validateFullName() ||
+    !validateEmail() ||
+    !validateMsg()
+  ) {
+    submitErr.style.display = "block";
+    submitErr.style.color = "red";
+    submitErr.innerHTML = "Please fix error to submit";
+    setTimeout(() => {
+      submitErr.style.display = "none";
+    }, 3000);
+    return false;
+  }
+    submitErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+    submitErr.style.color = 'green'
+  return true;
+}
 
