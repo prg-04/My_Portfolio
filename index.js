@@ -271,3 +271,11 @@ window.addEventListener("load", () => {
   }
 });
 
+function storeValues() {
+  const formData = {
+    fullName: fullName.value,
+    email: email.value,
+    msg: msg.value,
+  };
+  localStorage.setItem("userInfo", JSON.stringify(formData));
+}
