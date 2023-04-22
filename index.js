@@ -243,24 +243,22 @@ clsModal.addEventListener('click', () => {
   });
 });
 
+const storeData = document.getElementById('form');
+const fullName = document.getElementById('fullName');
+const email = document.getElementById('email');
+const msg = document.getElementById('msg');
 
-
-const storeData = document.getElementById("form");
-const fullName = document.getElementById("fullName");
-const email = document.getElementById("email");
-const msg = document.getElementById("msg");
-
-storeData.addEventListener("input", () => {
+storeData.addEventListener('input', () => {
   const formData = {
     fullName: fullName.value,
     email: email.value,
     msg: msg.value,
   };
-  localStorage.setItem("userInfo", JSON.stringify(formData));
+  localStorage.setItem('userInfo', JSON.stringify(formData));
 });
 
-window.addEventListener("load", () => {
-  let savedData = localStorage.getItem("userInfo");
+window.addEventListener('load', () => {
+  let savedData = localStorage.getItem('userInfo');
 
   savedData = JSON.parse(savedData);
 
@@ -277,5 +275,5 @@ function storeValues() {
     email: email.value,
     msg: msg.value,
   };
-  localStorage.setItem("userInfo", JSON.stringify(formData));
+  localStorage.setItem('userInfo', JSON.stringify(formData));
 }
