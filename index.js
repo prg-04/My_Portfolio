@@ -1,6 +1,5 @@
 import { cardsData, modalData } from './constants/constants.js';
 
-
 const toggle = document.querySelector('.toggle');
 const navlinks = document.querySelector('.navlinks');
 const links = document.querySelectorAll('.link');
@@ -245,4 +244,3 @@ clsModal.addEventListener('click', () => {
     blurElement.classList.remove('open');
   });
 });
-

@@ -1,4 +1,4 @@
-const cardsData = [
+export const cardsData = [
   {
     title: 'My Recent Works',
     placeHolder: [
@@ -59,7 +59,6 @@ const cardsData = [
   },
 ];
 
-
 export const modalData = [
   {
     title: [
@@ -78,4 +77,3 @@ export const modalData = [
     buttons: ['See Live', 'See Source'],
   },
 ];
-
