@@ -374,9 +374,9 @@ $default-bg-size: 100px;
 
   .modal {
     position: fixed;
-    top: 3rem;
+    top: 0.5rem;
     left: 10px;
-    z-index: 20;
+    z-index: 40;
     background-color: #f4f1f0;
     width: 95%;
     height: 100%;
@@ -569,9 +569,11 @@ $default-bg-size: 100px;
   }
 
   .slide-in-fwd-center {
-    -webkit-animation: slide-in-fwd-center 2s
+    -webkit-animation:
+      slide-in-fwd-center 2s
       cubic-bezier(0.25, 0.46, 0.45, 0.94) 3500ms both;
-    animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    animation:
+      slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       3500ms both;
   }
 
@@ -822,6 +824,7 @@ $default-bg-size: 100px;
       height: 100%;
       border: none;
       position: relative;
+
       .msgValid,
       .err {
         position: absolute;
@@ -836,6 +839,7 @@ $default-bg-size: 100px;
       .input-group {
         display: flex;
         align-items: center;
+
         .input-grp {
           width: 100%;
           margin: 0.5rem 0;
@@ -863,6 +867,7 @@ $default-bg-size: 100px;
             }
           }
         }
+
         .fullNameErr,
         .emailError,
         .emailValid,
@@ -995,6 +1000,7 @@ $default-bg-size: 100px;
           bottom: 16%;
           left: 58%;
         }
+
         .input-group {
           .fullNameErr,
           .emailError,
@@ -1085,6 +1091,7 @@ $default-bg-size: 100px;
           bottom: 16%;
           left: 71%;
         }
+
         .input-group {
           .fullNameErr,
           .emailError,
@@ -1117,9 +1124,8 @@ $default-bg-size: 100px;
 }
 
 @media only screen and (min-width: 768px) {
-
   #about {
-     .experience {
+    .experience {
       flex-direction: row;
       justify-content: space-around;
 
@@ -1164,9 +1170,9 @@ $default-bg-size: 100px;
         }
 
         .submitError,
-      .formValid {
-        align-self: start;
-      }
+        .formValid {
+          align-self: start;
+        }
 
         .msgValid,
         .err {
@@ -1332,15 +1338,18 @@ $default-bg-size: 100px;
       }
     }
   }
+
   #contact {
     #form {
       width: 80%;
+
       fieldset {
         .msgValid,
         .err {
           bottom: 16%;
           left: 71%;
         }
+
         .input-group {
           .fullNameErr,
           .emailError,
@@ -1370,13 +1379,11 @@ $default-bg-size: 100px;
     .about_me {
       margin-left: 3.5rem;
     }
-
-   
   }
 
   #portfolio {
     .modal {
-      inset: 3.5rem 10% 3.5rem 6%;
+      inset: 1.5rem 2.5rem;
 
       .content {
         .description {
@@ -1398,6 +1405,7 @@ $default-bg-size: 100px;
           bottom: 16%;
           left: 77%;
         }
+
         .input-group {
           .fullNameErr,
           .emailError,
@@ -1407,6 +1415,14 @@ $default-bg-size: 100px;
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #portfolio {
+    .modal {
+      inset: 1.5rem 8.5rem;
     }
   }
 }

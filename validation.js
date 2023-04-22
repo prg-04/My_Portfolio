@@ -6,8 +6,6 @@ const msgErr = document.querySelector('.msgError');
 const msgValid = document.querySelector('.msgValid');
 const submitErr = document.querySelector('.submitError');
 
-const formValid = document.querySelector('.formValid');
-
 function validateFullName() {
   const fullName = document.getElementById('fullName').value;
 
@@ -35,11 +33,7 @@ function validateEmail() {
 
     return false;
   }
-  if (
-    !email.match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    )
-  ) {
+  if (!email.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)) {
     emailErr.innerHTML = 'Email Invalid';
     emailValid.innerHTML = null;
     return false;
@@ -65,3 +59,23 @@ function validateMsg() {
   msgValid.style.color = 'green';
   return true;
 }
+
+const form = document.getElementById('#form');
+
+const submitBtn = document.querySelector('.submit_btn');
+
+submitBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  if (!validateFullName() || !validateEmail() || !validateMsg()) {
+    submitErr.style.display = 'block';
+    submitErr.style.color = 'red';
+    submitErr.innerHTML = 'Please fix errors to submit';
+    setTimeout(() => {
+      submitErr.style.display = 'none';
+    }, 3000);
+  } else {
+    form.submit();
+  }
+});
+
