@@ -242,6 +242,3 @@ clsModal.addEventListener('click', () => {
     blurElement.classList.remove('open');
   });
 });
-
-
-
