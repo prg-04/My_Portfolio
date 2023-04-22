@@ -1,4 +1,4 @@
-export const cardsData = [
+const cardsData = [
   {
     title: 'My Recent Works',
     placeHolder: [
@@ -59,6 +59,7 @@ export const cardsData = [
   },
 ];
 
+
 export const modalData = [
   {
     title: [
@@ -71,9 +72,10 @@ export const modalData = [
       './assets/modal_mob.png',
       './assets/Icon.png',
     ],
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  industry's standard dummy text since the 1500s, when an unknown printer took a galley of type and  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  industry's standard dummy text since the 1500s, when an unknown printer took a galley of type and  scrambled it to make a type specimen book. ",
     text2:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, ",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     buttons: ['See Live', 'See Source'],
   },
 ];
+

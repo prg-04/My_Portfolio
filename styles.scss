@@ -17,6 +17,7 @@ hr {
   height: 1px;
   width: 90%;
   margin: 2rem 2rem 1rem;
+
 }
 
 .blur.open {
@@ -374,9 +375,9 @@ $default-bg-size: 100px;
 
   .modal {
     position: fixed;
-    top: 3rem;
+    top: 0.5rem;
     left: 10px;
-    z-index: 20;
+    z-index: 40;
     background-color: #f4f1f0;
     width: 95%;
     height: 100%;
@@ -1202,6 +1203,7 @@ $default-bg-size: 100px;
     .hero_text {
       width: 35rem;
 
+
       .title {
         margin-top: 3rem;
         font-size: 72px;
@@ -1383,7 +1385,7 @@ $default-bg-size: 100px;
 
   #portfolio {
     .modal {
-      inset: 3.5rem 10% 3.5rem 6%;
+      inset: 1.5rem 2.5rem;
 
       .content {
         .description {
@@ -1415,6 +1417,14 @@ $default-bg-size: 100px;
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #portfolio {
+    .modal {
+      inset: 1.5rem 8.5rem;
     }
   }
 }

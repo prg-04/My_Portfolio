@@ -1,5 +1,6 @@
 import { cardsData, modalData } from './constants/constants.js';
 
+
 const toggle = document.querySelector('.toggle');
 const navlinks = document.querySelector('.navlinks');
 const links = document.querySelectorAll('.link');
@@ -27,6 +28,8 @@ function makeDiv() {
 
 const titleDiv = makeDiv();
 titleDiv.className = 'title';
+titleDiv.classList.add('blur');
+
 titleDiv.innerHTML = `<h2>${title}</h2>`;
 
 const hr = document.createElement('hr');
@@ -242,3 +245,4 @@ clsModal.addEventListener('click', () => {
     blurElement.classList.remove('open');
   });
 });
+
