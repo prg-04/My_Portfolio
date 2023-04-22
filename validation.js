@@ -33,11 +33,7 @@ function validateEmail() {
 
     return false;
   }
-  if (
-    !email.match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    )
-  ) {
+  if (!email.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)) {
     emailErr.innerHTML = 'Email Invalid';
     emailValid.innerHTML = null;
     return false;
@@ -64,21 +60,21 @@ function validateMsg() {
   return true;
 }
 
-// Comment for the reviewer
+const form = document.getElementById('form');
 
-// I have used the variable in the html but am getting
-// no-unused-vars error for formValidate so i had to disable the eslint
-// eslint-disable-next-line no-unused-vars
-function formValidate() {
+const submitBtn = document.querySelector('.submit_btn');
+
+submitBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+
   if (!validateFullName() || !validateEmail() || !validateMsg()) {
     submitErr.style.display = 'block';
     submitErr.style.color = 'red';
-    submitErr.innerHTML = 'Please fix error to submit';
+    submitErr.innerHTML = 'Please fix errors to submit';
     setTimeout(() => {
       submitErr.style.display = 'none';
     }, 3000);
-    return false;
+  } else {
+    form.submit();
   }
-  submitErr.innerHTML = '';
-  return true;
-}
+});
