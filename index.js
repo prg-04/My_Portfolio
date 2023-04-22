@@ -244,3 +244,40 @@ clsModal.addEventListener('click', () => {
     blurElement.classList.remove('open');
   });
 });
+
+const storeData = document.getElementById('form');
+const fullName = document.getElementById('fullName');
+const email = document.getElementById('email');
+const msg = document.getElementById('msg');
+
+storeData.addEventListener('input', () => {
+  const formData = {
+    fullName: fullName.value,
+    email: email.value,
+    msg: msg.value,
+  };
+  localStorage.setItem('userInfo', JSON.stringify(formData));
+});
+
+window.addEventListener('load', () => {
+  let savedData = localStorage.getItem('userInfo');
+
+  savedData = JSON.parse(savedData);
+
+  if (savedData) {
+    email.value = savedData.email;
+    fullName.value = savedData.fullName;
+    msg.value = savedData.msg;
+  }
+});
+
+const submitBtn = document.querySelector('.submit_btn');
+
+submitBtn.addEventListener('click', () => {
+  const formData = {
+    fullName: fullName.value,
+    email: email.value,
+    msg: msg.value,
+  };
+  localStorage.setItem('userInfo', JSON.stringify(formData));
+});

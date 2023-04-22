@@ -59,8 +59,7 @@ function validateMsg() {
   msgValid.style.color = 'green';
   return true;
 }
-
-const form = document.getElementById('form');
+const form = document.querySelector('#form');
 
 const submitBtn = document.querySelector('.submit_btn');
 
