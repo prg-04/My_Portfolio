@@ -10,13 +10,13 @@
 
 body {
   overflow-x: auto;
+  height: -webkit-fill-available;
 }
 
 hr {
   height: 1px;
   width: 90%;
   margin: 2rem 2rem 1rem;
-
 }
 
 .blur.open {
@@ -811,47 +811,106 @@ $default-bg-size: 100px;
     }
   }
 
+  $input-height: 40px;
+  $label-width: 120px;
+  $error-width: 120px;
+
   #form {
-    width: 80%;
+    width: 90%;
 
     fieldset {
       display: flex;
       flex-direction: column;
       height: 100%;
       border: none;
+      position: relative;
 
-      .input-grp {
-        width: 100%;
-        margin: 0.5rem 0;
-        border-bottom: 1px solid #dbd8d7;
+      .msgValid,
+      .err {
+        position: absolute;
+        bottom: 16%;
+        left: 45%;
+        width: $error-width + 35px;
+        font-size: 14px;
+        color: red;
+        text-align: right;
+      }
 
-        input {
+      .input-group {
+        display: flex;
+        align-items: center;
+
+        .input-grp {
           width: 100%;
-          height: 40px;
-          border: none;
-          margin-bottom: 0.5rem;
-          padding-left: 1rem;
+          margin: 0.5rem 0;
+          border-bottom: 1px solid #dbd8d7;
+          display: flex;
+          align-items: center;
+          position: relative;
 
-          &:focus {
-            outline: none;
+          label {
+            width: $label-width;
+            font-weight: bold;
+            margin-right: 10px;
+            text-align: right;
+          }
+
+          input {
+            width: 100%;
+            height: 40px;
+            border: none;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        .fullNameErr,
+        .emailError,
+        .emailValid,
+        .fullNValid {
+          position: absolute;
+          z-index: 1;
+          inset: auto 56%;
+          width: $error-width;
+          font-size: 14px;
+          color: red;
+          text-align: right;
+        }
+
+        .input-grp_msg {
+          width: 100%;
+          margin: 0.5rem 0;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          textarea {
+            resize: horizontal;
+            width: 100%;
+            border: none;
+            background-color: #f0eded;
+            padding: 1rem;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .msgValid {
+            position: absolute;
+            bottom: 16%;
+            left: 45%;
           }
         }
       }
-    }
 
-    .input-grp_msg {
-      width: 100%;
-      margin: 0.5rem 0;
-
-      textarea {
-        width: 100%;
-        border: none;
-        background-color: #f0eded;
-        padding: 1rem;
-
-        &:focus {
-          outline: none;
-        }
+      .submitError,
+      .formValid {
+        align-self: center;
       }
     }
 
@@ -906,7 +965,7 @@ $default-bg-size: 100px;
   }
 }
 
-@media only screen and (min-width: 425px) {
+@media screen and (min-width: 425px) {
   #portfolio {
     .modal {
       .content {
@@ -928,6 +987,27 @@ $default-bg-size: 100px;
 
         .description {
           margin-top: 0;
+        }
+      }
+    }
+  }
+
+  #contact {
+    #form {
+      fieldset {
+        .msgValid,
+        .err {
+          bottom: 16%;
+          left: 58%;
+        }
+
+        .input-group {
+          .fullNameErr,
+          .emailError,
+          .emailValid,
+          .fullNValid {
+            inset: auto 66%;
+          }
         }
       }
     }
@@ -1003,6 +1083,27 @@ $default-bg-size: 100px;
     }
   }
 
+  #contact {
+    #form {
+      fieldset {
+        .msgValid,
+        .err {
+          bottom: 16%;
+          left: 71%;
+        }
+
+        .input-group {
+          .fullNameErr,
+          .emailError,
+          .emailValid,
+          .fullNValid {
+            inset: auto 75%;
+          }
+        }
+      }
+    }
+  }
+
   #footer {
     margin-top: 1rem;
 
@@ -1023,6 +1124,25 @@ $default-bg-size: 100px;
 }
 
 @media only screen and (min-width: 768px) {
+  #about {
+    .experience {
+      flex-direction: row;
+      justify-content: space-around;
+
+      .skill_stack {
+        align-items: start;
+
+        .abt-tec {
+          align-items: start;
+        }
+      }
+
+      .stack-one {
+        margin-top: -2.5rem;
+      }
+    }
+  }
+
   #contact {
     flex-direction: row;
 
@@ -1048,6 +1168,26 @@ $default-bg-size: 100px;
         .submit_btn {
           align-self: start;
         }
+
+        .submitError,
+        .formValid {
+          align-self: start;
+        }
+
+        .msgValid,
+        .err {
+          bottom: 16%;
+          left: 65%;
+        }
+
+        .input-group {
+          .fullNameErr,
+          .emailError,
+          .emailValid,
+          .fullNValid {
+            inset: auto 71%;
+          }
+        }
       }
     }
   }
@@ -1061,7 +1201,6 @@ $default-bg-size: 100px;
 
     .hero_text {
       width: 35rem;
-
 
       .title {
         margin-top: 3rem;
@@ -1199,6 +1338,29 @@ $default-bg-size: 100px;
       }
     }
   }
+
+  #contact {
+    #form {
+      width: 80%;
+
+      fieldset {
+        .msgValid,
+        .err {
+          bottom: 16%;
+          left: 71%;
+        }
+
+        .input-group {
+          .fullNameErr,
+          .emailError,
+          .emailValid,
+          .fullNValid {
+            inset: auto 75%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1217,23 +1379,6 @@ $default-bg-size: 100px;
     .about_me {
       margin-left: 3.5rem;
     }
-
-    .experience {
-      flex-direction: row;
-      justify-content: space-around;
-
-      .skill_stack {
-        align-items: start;
-
-        .abt-tec {
-          align-items: start;
-        }
-      }
-
-      .stack-one {
-        margin-top: -2.5rem;
-      }
-    }
   }
 
   #portfolio {
@@ -1246,6 +1391,27 @@ $default-bg-size: 100px;
 
           .modal_buttons {
             margin-top: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    #form {
+      fieldset {
+        .msgValid,
+        .err {
+          bottom: 16%;
+          left: 77%;
+        }
+
+        .input-group {
+          .fullNameErr,
+          .emailError,
+          .emailValid,
+          .fullNValid {
+            inset: auto 81%;
           }
         }
       }

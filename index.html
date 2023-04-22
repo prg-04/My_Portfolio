@@ -29,7 +29,6 @@
           </li>
           <li class="link">
             <a href="/" aria-label="contact" role="link"
-
               ><i class="fa-regular fa-envelope"></i
             ></a>
           </li>
@@ -44,7 +43,6 @@
         <h1 class="title">
           Hey There <br />
           I'm Evans
-
         </h1>
 
         <h2 class="subtitle">I'm a Software Developer</h2>
@@ -74,7 +72,6 @@
           <li class="icon">
             <a href="/" aria-label="reach out to me"
               ><img class="heroVector" src="./assets/Vector.png" alt="vector"
-
             /></a>
           </li>
           <li class="icon">
@@ -92,7 +89,6 @@
     <section id="portfolio"></section>
     <section id="about" class="blur">
       <div class="about_me" data-scrollmagic="zoom-in-down">
-
         <h2 class="abt_title">About me</h2>
         <p class="abt_description">
           Hey there! I can help you build a product, feature or website. Look
@@ -103,12 +99,7 @@
       </div>
       <hr class="abt_line" />
       <div class="experience">
-        <div
-          class="skill_stack stack-one"
-          data-scrollmagic="fade-right"
-          data-scrollmagic-offset="300"
-          data-scrollmagic-easing="ease-in-sine">
-
+        <div class="skill_stack stack-one">
           <h4 class="skl_stack-title">
             <span><img src="./assets/Rectangle 55.png" alt="vector" /></span
             >Language
@@ -125,7 +116,6 @@
           data-scrollmagic="fade-right"
           data-scrollmagic-offset="400"
           data-scrollmagic-easing="ease-in-sine">
-
           <h4 class="skl_stack-title">
             <span><img src="./assets/Rectangle 56.png" alt="vector" /></span
             >Frameworks
@@ -138,12 +128,7 @@
             <li class="skill">Selenium</li>
           </ul>
         </div>
-        <div
-          class="skill_stack"
-          data-scrollmagic="fade-right"
-          data-scrollmagic-offset="500"
-          data-scrollmagic-easing="ease-in-sine">
-
+        <div class="skill_stack">
           <h4 class="skl_stack-title">
             <span><img src="./assets/Rectangle 57.png" alt="vector" /></span
             >Skills
@@ -172,35 +157,57 @@
         id="form"
         data-aos="fade-down-left">
         <fieldset>
-          <label class="input-grp">
-            <input
-              type="text"
-              name="fullName"
-              id="fullName"
-              maxlength="30"
-              placeholder="Full Name"
-              required />
-          </label>
-          <label class="input-grp">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email Address"
-              required />
-          </label>
-          <label class="input-grp_msg">
-            <textarea
-              name="msg"
-              id="msg"
-              cols="30"
-              rows="10"
-              minlength="30"
-              maxlength="500"
-              placeholder="Write me something..."
-              required></textarea>
-          </label>
-          <button class="submit_btn" type="submit">Get in Touch</button>
+          <div class="input-group">
+            <label class="input-grp">
+              <input
+                type="text"
+                name="fullName"
+                id="fullName"
+                maxlength="30"
+                placeholder="Full Name"
+                onkeyup="validateFullName()"
+                required />
+            </label>
+            <span class="fullNameErr"></span>
+            <span class="fullNValid"></span>
+          </div>
+          <div class="input-group">
+            <label class="input-grp">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                onkeyup="validateEmail()"
+                required />
+            </label>
+            <span class="emailError"></span>
+            <span class="emailValid"></span>
+          </div>
+          <div class="input-group">
+            <label class="input-grp_msg">
+              <textarea
+                name="msg"
+                id="msg"
+                cols="30"
+                rows="10"
+                minlength="30"
+                maxlength="500"
+                placeholder="Write me something..."
+                onkeyup=" validateMsg()"
+                required></textarea>
+            </label>
+            <span class="err msgError"></span>
+            <span class="msgValid"></span>
+          </div>
+          <button
+            class="submit_btn"
+            type="submit"
+            clear>
+            Get in Touch
+          </button>
+          <span class="submitError"></span>
+          <span class="formValid"></span>
         </fieldset>
       </form>
     </section>
@@ -242,7 +249,8 @@
         </li>
       </ul>
     </footer>
+    <script src="validation.js"></script>
 
-    <script type="module" src="index.js"></script>
+    <script type="module" src="index.js" defer></script>
   </body>
 </html>

@@ -10,13 +10,13 @@
 
 body {
   overflow-x: auto;
+  height: -webkit-fill-available;
 }
 
 hr {
   height: 1px;
   width: 90%;
   margin: 2rem 2rem 1rem;
-
 }
 
 .blur.open {
@@ -768,7 +768,7 @@ hr {
 }
 
 #contact #form {
-  width: 80%;
+  width: 90%;
 }
 
 #contact #form fieldset {
@@ -776,15 +776,42 @@ hr {
   flex-direction: column;
   height: 100%;
   border: none;
+  position: relative;
 }
 
-#contact #form fieldset .input-grp {
+#contact #form fieldset .msgValid,
+#contact #form fieldset .err {
+  position: absolute;
+  bottom: 16%;
+  left: 45%;
+  width: 155px;
+  font-size: 14px;
+  color: red;
+  text-align: right;
+}
+
+#contact #form fieldset .input-group {
+  display: flex;
+  align-items: center;
+}
+
+#contact #form fieldset .input-group .input-grp {
   width: 100%;
   margin: 0.5rem 0;
   border-bottom: 1px solid #dbd8d7;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-#contact #form fieldset .input-grp input {
+#contact #form fieldset .input-group .input-grp label {
+  width: 120px;
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: right;
+}
+
+#contact #form fieldset .input-group .input-grp input {
   width: 100%;
   height: 40px;
   border: none;
@@ -792,24 +819,52 @@ hr {
   padding-left: 1rem;
 }
 
-#contact #form fieldset .input-grp input:focus {
+#contact #form fieldset .input-group .input-grp input:focus {
   outline: none;
 }
 
-#contact #form .input-grp_msg {
-  width: 100%;
-  margin: 0.5rem 0;
+#contact #form fieldset .input-group .fullNameErr,
+#contact #form fieldset .input-group .emailError,
+#contact #form fieldset .input-group .emailValid,
+#contact #form fieldset .input-group .fullNValid {
+  position: absolute;
+  z-index: 1;
+  inset: auto 56%;
+  width: 120px;
+  font-size: 14px;
+  color: red;
+  text-align: right;
 }
 
-#contact #form .input-grp_msg textarea {
+#contact #form fieldset .input-group .input-grp_msg {
+  width: 100%;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#contact #form fieldset .input-group .input-grp_msg textarea {
+  resize: horizontal;
   width: 100%;
   border: none;
   background-color: #f0eded;
   padding: 1rem;
 }
 
-#contact #form .input-grp_msg textarea:focus {
+#contact #form fieldset .input-group .input-grp_msg textarea:focus {
   outline: none;
+}
+
+#contact #form fieldset .input-group .input-grp_msg .msgValid {
+  position: absolute;
+  bottom: 16%;
+  left: 45%;
+}
+
+#contact #form fieldset .submitError,
+#contact #form fieldset .formValid {
+  align-self: center;
 }
 
 #contact #form .submit_btn {
@@ -859,7 +914,7 @@ hr {
   height: 1.8rem;
 }
 
-@media only screen and (min-width: 425px) {
+@media screen and (min-width: 425px) {
   #portfolio .modal .content .image {
     padding: 1.5rem;
     width: 90%;
@@ -878,6 +933,19 @@ hr {
 
   #portfolio .modal .content .description {
     margin-top: 0;
+  }
+
+  #contact #form fieldset .msgValid,
+  #contact #form fieldset .err {
+    bottom: 16%;
+    left: 58%;
+  }
+
+  #contact #form fieldset .input-group .fullNameErr,
+  #contact #form fieldset .input-group .emailError,
+  #contact #form fieldset .input-group .emailValid,
+  #contact #form fieldset .input-group .fullNValid {
+    inset: auto 66%;
   }
 }
 
@@ -943,6 +1011,19 @@ hr {
     width: 50%;
   }
 
+  #contact #form fieldset .msgValid,
+  #contact #form fieldset .err {
+    bottom: 16%;
+    left: 71%;
+  }
+
+  #contact #form fieldset .input-group .fullNameErr,
+  #contact #form fieldset .input-group .emailError,
+  #contact #form fieldset .input-group .emailValid,
+  #contact #form fieldset .input-group .fullNValid {
+    inset: auto 75%;
+  }
+
   #footer {
     margin-top: 1rem;
   }
@@ -961,6 +1042,23 @@ hr {
 }
 
 @media only screen and (min-width: 768px) {
+  #about .experience {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #about .experience .skill_stack {
+    align-items: start;
+  }
+
+  #about .experience .skill_stack .abt-tec {
+    align-items: start;
+  }
+
+  #about .experience .stack-one {
+    margin-top: -2.5rem;
+  }
+
   #contact {
     flex-direction: row;
   }
@@ -988,6 +1086,24 @@ hr {
     align-self: start;
   }
 
+  #contact #form fieldset .submitError,
+  #contact #form fieldset .formValid {
+    align-self: start;
+  }
+
+  #contact #form fieldset .msgValid,
+  #contact #form fieldset .err {
+    bottom: 16%;
+    left: 65%;
+  }
+
+  #contact #form fieldset .input-group .fullNameErr,
+  #contact #form fieldset .input-group .emailError,
+  #contact #form fieldset .input-group .emailValid,
+  #contact #form fieldset .input-group .fullNValid {
+    inset: auto 71%;
+  }
+
   #hero {
     flex-direction: row-reverse;
     justify-content: start;
@@ -998,7 +1114,6 @@ hr {
 
   #hero .hero_text {
     width: 35rem;
-
   }
 
   #hero .hero_text .title {
@@ -1125,6 +1240,23 @@ hr {
     display: block;
     margin-top: 0.5rem;
   }
+
+  #contact #form {
+    width: 80%;
+  }
+
+  #contact #form fieldset .msgValid,
+  #contact #form fieldset .err {
+    bottom: 16%;
+    left: 71%;
+  }
+
+  #contact #form fieldset .input-group .fullNameErr,
+  #contact #form fieldset .input-group .emailError,
+  #contact #form fieldset .input-group .emailValid,
+  #contact #form fieldset .input-group .fullNValid {
+    inset: auto 75%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1145,23 +1277,6 @@ hr {
     margin-left: 3.5rem;
   }
 
-  #about .experience {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  #about .experience .skill_stack {
-    align-items: start;
-  }
-
-  #about .experience .skill_stack .abt-tec {
-    align-items: start;
-  }
-
-  #about .experience .stack-one {
-    margin-top: -2.5rem;
-  }
-
   #portfolio .modal {
     inset: 1.5rem 2.5rem;
   }
@@ -1172,6 +1287,19 @@ hr {
 
   #portfolio .modal .content .description .modal_buttons {
     margin-top: 5rem;
+  }
+
+  #contact #form fieldset .msgValid,
+  #contact #form fieldset .err {
+    bottom: 16%;
+    left: 77%;
+  }
+
+  #contact #form fieldset .input-group .fullNameErr,
+  #contact #form fieldset .input-group .emailError,
+  #contact #form fieldset .input-group .emailValid,
+  #contact #form fieldset .input-group .fullNValid {
+    inset: auto 81%;
   }
 }
 
